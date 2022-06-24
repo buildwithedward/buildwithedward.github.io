@@ -15,7 +15,7 @@ author: Edward Praveen
 
 navbar-links:
   Blog: "https://edwardcodes.github.io"
-  Misc: "misc"
+#  Projects: "projects"
   About: "aboutme"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"

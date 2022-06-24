@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Miscellaneous
-subtitle: "Posts about what I read and experience in day to day life."
+title: Projects
+subtitle: "Projects which I have done during my learning."
 ---
 
-<div id="misc">
+<!-- <div id="misc">
   <ul class="posts">
     {% for post in site.posts %}
       {% if post.category == "misc" %}
@@ -12,4 +12,4 @@ subtitle: "Posts about what I read and experience in day to day life."
       {% endif %}
     {% endfor %}
   </ul>
-</div>
+</div> -->
