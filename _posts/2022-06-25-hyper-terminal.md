@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Make your terminal look like MacOS bash
+title: Hyper - Give life to your default terminal
 subtitle: Terminal for those who love UI
 cover-img: /assets/img/hyper.png
 thumbnail-img: /assets/img/hyper.png
