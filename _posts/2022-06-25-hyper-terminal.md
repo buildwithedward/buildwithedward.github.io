@@ -2,7 +2,7 @@
 layout: post
 title: Hyper - Give life to your default terminal
 subtitle: Terminal for those who love UI
-cover-img: /assets/img/hyper.png
+#cover-img: /assets/img/hyper.png
 thumbnail-img: /assets/img/hyper.png
 share-img: /assets/img/hyper.png
 permalink: /blog/hyper-terminal/
@@ -106,6 +106,7 @@ We have set our hyper terminal, but if you try to open terminal using hotkeys `C
 (base) ➜  ~ update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/hyper 1
 (base) ➜  ~ update-alternatives --set x-terminal-emulator /usr/local/bin/hyper
 ```
+
 - Select the choice with the below command to make hyper as default terminal.
 ```bash
 (base) ➜  ~ sudo update-alternatives --config x-terminal-emulator
@@ -120,6 +121,7 @@ There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/
 Press <enter> to keep the current choice[*], or type selection number: 2
 (base) ➜  ~ 
 ```
+
 If you want to make your gnome terminal as default, repeat the last step again and select either `0` or `1`
 
 ## Limitations {#limitations}
