@@ -88,7 +88,7 @@ We can customize the hyper terminal by the following command
 $ sudo nano ~/.hyper.js
 ```
 
-![](https://github.com/edwardcodes/edwardcodes.github.io/blob/main/assets/img/hyper-settings.png)
+![](https://raw.githubusercontent.com/edwardcodes/edwardcodes.github.io/main/assets/img/hyper-settings.png)
 
 ## Step 6: Making hyper as default terminal {#step6}
 
