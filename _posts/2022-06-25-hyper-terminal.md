@@ -45,10 +45,10 @@ Finally, I find the impressive terminal emulator - [hyper.is](https://hyper.is/)
 
 ## Step 1: Download Hyper terminal File {#step1}
 
-First, we will need to download the Hyper terminal `deb` file through the below mentioned command. For OS installations, check the [website](https://hyper.is/)
+First, we need to download the Hyper terminal `deb` file through the below mentioned command. For OS installations, check the [website](https://hyper.is/)
 
 {: .box-note}
-**Note:** You can run hyper terminal through `.AppImage` in Linux distros if you want to try it out.
+**Note:** We can run hyper terminal through `.AppImage` in Linux distros if you want to try it out without installing.
 
 ```bash
 $ wget -O hyper_3.2.3_amd64.deb https://releases.hyper.is/download/deb
@@ -56,7 +56,7 @@ $ wget -O hyper_3.2.3_amd64.deb https://releases.hyper.is/download/deb
 
 ## Step 2: Update the system after the installation {#step2}
 
-It is best practice to update the system before installing any package.
+It is the best practice to update the system before installing any package.
 
 ```bash
 $ sudo apt update
@@ -78,7 +78,7 @@ $ sudo dpkg -i hyper_3.2.3_amd64.deb
 
 ## Step 4: Running the Hyper Terminal on Ubuntu 22.04 {#step4}
 
-Once the Hyper terminal installation is completed, you can then search the application on the Ubuntu applications search bar Or you can use the `hyper` command in the terminal to run the application on the desktop.
+Once the Hyper terminal installation is completed, we can then search the application on the Ubuntu applications search bar or we can use the `hyper` command in the terminal to run the application on the desktop.
 
 ## Step 5: Customizing the Hyper Terminal {#step5}
 
@@ -92,7 +92,7 @@ $ sudo nano ~/.hyper.js
 
 ## Step 6: Making hyper as default terminal {#step6}
 
-We have set our hyper terminal, but if you try to open terminal using hotkeys `CTRL + ALT + T`, it will open default gnome terminal instead of hyper. Because, your linux distro does not consider hyper as an alternative terminal. We can change this by below commands
+We have set our hyper terminal, but if we try to open terminal using hotkeys `CTRL + ALT + T`, it will open default gnome terminal instead of hyper. Because, our linux distro does not consider hyper as an alternative terminal. We can change this by below commands
 
 Find where your `hyper` is located
 ```bash
@@ -101,7 +101,7 @@ Find where your `hyper` is located
 (base) ➜  ~ 
 ```
 
-Set your hyper terminal with `priority` to identify the terminal later with choice. I set the priority for hyper as `1`
+Set your hyper terminal with `priority` to identify the terminal later with choice. Here, I set the priority for hyper as `1`
 
 ```bash
 (base) ➜  ~ update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/hyper 1
@@ -123,7 +123,7 @@ Press <enter> to keep the current choice[*], or type selection number: 2
 (base) ➜  ~ 
 ```
 
-If you want to make your gnome terminal as default, repeat the last step again and select either `0` or `1`
+If we want to make your gnome terminal as default again, repeat the last step and select either `0` or `1`
 
 ## Limitations {#limitations}
 
