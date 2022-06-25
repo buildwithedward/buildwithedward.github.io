@@ -94,20 +94,21 @@ $ sudo nano ~/.hyper.js
 
 We have set our hyper terminal, but if you try to open terminal using hotkeys `CTRL + ALT + T`, it will open default gnome terminal instead of hyper. Because, your linux distro does not consider hyper as an alternative terminal. We can change this by below commands
 
-- Find where your `hyper` is located
+Find where your `hyper` is located
 ```bash
 (base) ➜  ~ which hyper 
 /usr/local/bin/hyper
 (base) ➜  ~ 
 ```
-- Set your hyper terminal with `priority` to identify the terminal later with choice. I set the priority for hyper as `1`
+
+Set your hyper terminal with `priority` to identify the terminal later with choice. I set the priority for hyper as `1`
 
 ```bash
 (base) ➜  ~ update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/hyper 1
 (base) ➜  ~ update-alternatives --set x-terminal-emulator /usr/local/bin/hyper
 ```
 
-- Select the choice with the below command to make hyper as default terminal.
+Select the choice with the below command to make hyper as default terminal.
 ```bash
 (base) ➜  ~ sudo update-alternatives --config x-terminal-emulator
 There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
