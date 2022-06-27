@@ -48,7 +48,7 @@ Finally, I find the impressive terminal emulator - [hyper.is](https://hyper.is/)
 First, we need to download the Hyper terminal `deb` file through the below mentioned command. For OS installations, check the [website](https://hyper.is/)
 
 {: .box-note}
-**Note:** We can run hyper terminal through `.AppImage` in Linux distros if you want to try it out without installing.
+**Note:** We can run hyper terminal through `.AppImage` in Linux distros if we want to try it out without installing.
 
 ```bash
 $ wget -O hyper_3.2.3_amd64.deb https://releases.hyper.is/download/deb
@@ -123,10 +123,10 @@ Press <enter> to keep the current choice[*], or type selection number: 2
 (base) ➜  ~ 
 ```
 
-If we want to make your gnome terminal as default again, repeat the last step and select either `0` or `1`
+If we want to make our gnome terminal as default again, repeat the last step and select either `0` or `1`.
 
 ## Limitations {#limitations}
 
-- **Slow.** While preparing for this blog, I came to know about a [blog](https://medium.com/@brianhague/why-i-switched-my-terminal-to-hyper-then-switched-back-f0bd06af4d7d#:~:text=It%E2%80%99s%20slow.,interrupt%20my%20workflow.) where the author describes his issues with hyper being slow, when he used multiple hyper windows. I never faced this. Might be in future.
+- **Slow.** While preparing for this blog, I came to know about a [blog](https://medium.com/@brianhague/why-i-switched-my-terminal-to-hyper-then-switched-back-f0bd06af4d7d#:~:text=It%E2%80%99s%20slow.,interrupt%20my%20workflow.) where the author describes his issues with `hyper` being slow, when he used multiple hyper windows. I never faced this. Might be in future.
 
-- **Issue with Nautilus.** Nautilus is the file manager for Ubuntu. Even after making hyper as default terminal, if we try to open the terminal via `right click` mouse via `desktop`, either it redirects to gnome terminal or terminal won't open. 
+- **Issue with Nautilus.** Nautilus is the file manager for Ubuntu. Even after making hyper as default terminal, if we try to open the terminal via `right click` mouse via `desktop`, either it redirects to gnome terminal or terminal won't open.
