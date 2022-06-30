@@ -127,6 +127,6 @@ If we want to make our gnome terminal as default again, repeat the last step and
 
 ## Limitations {#limitations}
 
-- **Slow.** While preparing for this blog, I came to know about a [blog](https://medium.com/@brianhague/why-i-switched-my-terminal-to-hyper-then-switched-back-f0bd06af4d7d#:~:text=It%E2%80%99s%20slow.,interrupt%20my%20workflow.) where the author describes his issues with `hyper` being slow, when he used multiple hyper windows. I never faced this. Might be in future.
+- **Slow.** While preparing for this article, I came to know about another [article](https://medium.com/@brianhague/why-i-switched-my-terminal-to-hyper-then-switched-back-f0bd06af4d7d#:~:text=It%E2%80%99s%20slow.,interrupt%20my%20workflow.) where the author describes his issues with `hyper` as slow, when he used multiple hyper windows. I never faced this. Might be in future.
 
 - **Issue with Nautilus.** Nautilus is the file manager for Ubuntu. Even after making hyper as default terminal, if we try to open the terminal via `right click` mouse via `desktop`, either it redirects to gnome terminal or terminal won't open.
