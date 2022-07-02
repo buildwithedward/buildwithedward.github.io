@@ -62,22 +62,22 @@ In this blog, we would see how to setup cloud and access via our local terminal.
 {: .box-note}
 **Note:** This can be done through [puTTY](https://www.putty.org/) too.
 
-Copy/move the EC2 downloaded keypair from Windows folder to linux `.ssh` path. Here I named my `.pem` file as `dataengg-tamilboomi.pem`
+Copy/move the EC2 downloaded keypair to `.ssh` folder. Here I named my `.pem` file as `dataengg.pem`
 
 ```bash
-$ mv dataengg-tamilboomi.pem ~/.ssh
+$ mv dataengg.pem ~/.ssh
 ```
 
 Try to connect SSH by the following command where XX is the public IP address in the created EC2 instance.
 
 ```bash
-$ ssh -i dataengg-tamilboomi.pem ec2-user@XX.XXX.XXX.XXX
+$ ssh -i dataengg.pem ec2-user@XX.XXX.XXX.XXX
 ```
 
 The above steps would connect to instance or else, you would face the below error:
 
 ```bash
-$ ssh -i dataengg-tamilboomi.pem ec2-user@xx.xxx.xxx.xxx
+$ ssh -i dataengg.pem ec2-user@xx.xxx.xxx.xxx
 The authenticity of host 'xx.xxx.xxx.xxx (xx.xxx.xxx.xxx)' can't be established.
 ED25519 key fingerprint is SHA256:Gq1KnFeFtkLreTRn3hjOE6Pq68CHWjmymF1j+bjJums.
 This key is not known by any other names
@@ -86,10 +86,10 @@ Warning: Permanently added 'xx.xxx.xxx.xxx' (ED25519) to the list of known hosts
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Permissions 0664 for 'dataengg_tamilboomi.pem' are too open.
+Permissions 0664 for 'dataengg.pem' are too open.
 It is required that your private key files are NOT accessible by others.
 This private key will be ignored.
-Load key "dataengg_tamilboomi.pem": bad permissions
+Load key "dataengg.pem": bad permissions
 ec2-user@xx.xxx.xxx.xxx: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 ```
 The above error is due to file permission errors. To do solve this, follow below steps:
@@ -97,13 +97,13 @@ The above error is due to file permission errors. To do solve this, follow below
 ```bash
 $ chmod 600 ~/.ssh/id_ed25519
 
-$ sudo chmod 600 ~/.ssh/dataengg-tamilboomi.pem
+$ sudo chmod 600 ~/.ssh/dataengg.pem
 ```
 
 Run again SSH with keypair and it’d connect EC2 successfully.
 
 ```bash
-$ ssh -i dataengg-tamilboomi.pem ec2-user@XX.XXX.XXX.XXX
+$ ssh -i dataengg.pem ec2-user@XX.XXX.XXX.XXX
 
        __|  __|_  )
        _|  (     /   Amazon Linux 2 AMI
