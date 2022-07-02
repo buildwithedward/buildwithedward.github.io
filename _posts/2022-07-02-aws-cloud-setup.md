@@ -62,7 +62,7 @@ In this blog, we would see how to setup cloud and access via our local terminal.
 {: .box-note}
 **Note:** This can be done through [puTTY](https://www.putty.org/) too.
 
-Copy/ move the EC2 downloaded keypair from Windows folder to linux `.ssh` path. Here I named my `.pem` file as `dataengg-tamilboomi.pem`
+Copy/move the EC2 downloaded keypair from Windows folder to linux `.ssh` path. Here I named my `.pem` file as `dataengg-tamilboomi.pem`
 
 ```bash
 $ mv dataengg-tamilboomi.pem ~/.ssh
