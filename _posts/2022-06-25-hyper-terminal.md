@@ -6,7 +6,7 @@ subtitle: Terminal for those who love UI
 thumbnail-img: /assets/img/hyper.png
 share-img: /assets/img/hyper.png
 permalink: /blog/hyper-terminal/
-tags: [misc,ubuntu]
+tags: [ubuntu]
 ---
 
 {: .box-note}
