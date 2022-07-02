@@ -50,7 +50,7 @@ I understand your pain.
 
 To know these details:
 
-- Visit (flatpak)[flathub.org] website
+- Visit [flatpak](flathub.org) website
 - Select app which we want to install, say `Spotify`
 - Use `search apps` box to search the app
 - At the bottom of the app page, command line instructions are present to install the app. `flatpak install flathub com.spotify.Client`
