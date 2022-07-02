@@ -2,7 +2,7 @@
 layout: post
 title: Flatpak Apps in Gnome 
 subtitle: Install cross-distro apps in any Linux Distro
-cover-img: /assets/img/flatpak.jpg
+#cover-img: /assets/img/flatpak.jpg
 thumbnail-img: /assets/img/flatpak.jpg
 share-img: /assets/img/flatpak.jpg
 permalink: /blog/flatpak-bug/
