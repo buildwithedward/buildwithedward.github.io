@@ -48,9 +48,10 @@ In this blog, we would see how to setup cloud and access via our local terminal.
 
 - We create Instances in EC2 which provides a wide selection of instance types optimized to fit different use cases.
 - Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give us the flexibility to choose the appropriate mix of resources for our applications.
-
 - We can create new instance in `EC2 Dashboard` and click `Launch Instance`
+
 ![Launch Instance](https://raw.githubusercontent.com/edwardcodes/edwardcodes.github.io/main/assets/img/instance-creation.png)
+
 - Provide `name` for the instance under `Name and Tags` section.
 - Select `Amazon Linux OS` free tier in Amazon Machine Image (AMI)
 - Create new key pair and download `.pem` file in local system to use for accessing cloud
