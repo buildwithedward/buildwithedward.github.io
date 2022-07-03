@@ -96,21 +96,20 @@ We have set our hyper terminal, but if we try to open terminal using hotkeys `CT
 
 Find where your `hyper` is located
 ```bash
-(base) ➜  ~ which hyper 
-/usr/local/bin/hyper
-(base) ➜  ~ 
+$ which hyper 
+/usr/local/bin/hyper 
 ```
 
 Set your hyper terminal with `priority` to identify the terminal later with choice. Here, I set the priority for hyper as `1`
 
 ```bash
-(base) ➜  ~ update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/hyper 1
-(base) ➜  ~ update-alternatives --set x-terminal-emulator /usr/local/bin/hyper
+$ update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/hyper 1
+$ update-alternatives --set x-terminal-emulator /usr/local/bin/hyper
 ```
 
 Select the choice with the below command to make hyper as default terminal.
 ```bash
-(base) ➜  ~ sudo update-alternatives --config x-terminal-emulator
+$ sudo update-alternatives --config x-terminal-emulator
 There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
 
   Selection    Path                             Priority   Status
@@ -120,7 +119,6 @@ There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/
 * 2            /usr/local/bin/hyper              1         manual mode
 
 Press <enter> to keep the current choice[*], or type selection number: 2
-(base) ➜  ~ 
 ```
 
 If we want to make our gnome terminal as default again, repeat the last step and select either `0` or `1`.
