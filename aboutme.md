@@ -7,13 +7,9 @@ subtitle: Machine Learning Engineer
 Hello! I am Edward Praveen. I am a Data Scientist at Ruah Tech Solutions, Chennai.
 
 ### My story
-I went to Engineering School in Thuckalay and then followed up with a Masters in Business Adminstration at the prestigious VIT. 
-While pursuing my masters, I discovered the importance of data and its applications. I went on to work with Lyca Mobile Private Limited. 
-There, I worked with SQL which involves Data Manipulation, Reports Generation and Fraud Detection using Big Data. 
 
-I wanted to upgrade my tech skills, and I cultivated an interest in the Machine Learning field. 
-Currently I am working on NLP, Computer Vision Projects and learning Data Engineering to create end-to-end data products. 
+In my educational journey, I attended Engineering School in Thuckalay and subsequently pursued a Masters in Business Administration from the esteemed VIT. It was during my time as a master's student that I realized the significance of data and its various applications. 
 
+I then joined Lyca Mobile Private Limited, where I gained hands-on experience working with SQL. My responsibilities included Data Manipulation, Reports Generation, and utilizing Big Data for Fraud Detection purposes.
 
-
-
+Seeking to enhance my technical skills, I developed a keen interest in the field of Machine Learning. Currently, I am actively engaged in NLP and Computer Vision projects, while also immersing myself in the study of Data Engineering. My goal is to create comprehensive data products that encompass the entire data pipeline.
