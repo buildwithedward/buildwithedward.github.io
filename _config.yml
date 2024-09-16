@@ -14,7 +14,7 @@ author: Edward Praveen
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Blog: "https://edwarddennispraveen.github.io"
+  Blog: "https://buildwithedward.github.io"
 #  Projects: "projects"
   About: "aboutme"
   # Resources:
@@ -46,7 +46,7 @@ social-network-links:
   email: "edwardpraveen@outlook.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 #  facebook: deanattali
-  github: edwarddennispraveen
+  github: buildwithedward
   twitter: _edwardpraveen
   # patreon: DeanAttali
   # youtube: c/daattali
