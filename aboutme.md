@@ -4,7 +4,7 @@ title: About me
 subtitle: Machine Learning Engineer
 ---
 
-Hello! I am Edward Praveen. I am a Data Scientist.
+Hello! I am Edward Praveen. 
 
 ### My story
 
