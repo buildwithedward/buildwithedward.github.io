@@ -1,15 +1,13 @@
 ---
-layout: post
-title: Hyper - Give life to your default terminal
-subtitle: Terminal for those who love UI
-#cover-img: /assets/img/hyper.png
-thumbnail-img: /assets/img/hyper.png
-share-img: /assets/img/hyper.png
-permalink: /blog/hyper-terminal/
+layout: single
+title: "Hyper - Give life to your default terminal"
+excerpt: "Terminal for those who love UI"
+header:
+  teaser: /assets/img/hyper.png
 tags: [ubuntu]
 ---
 
-{: .box-note}
+{: .notice--info}
 **Note:** This article covers the installation in Ubuntu 22.04. For other OS, kindly check the [Website](https://hyper.is/)
 
 # Table of contents
@@ -47,7 +45,7 @@ Finally, I find the impressive terminal emulator - [hyper.is](https://hyper.is/)
 
 First, we need to download the Hyper terminal `deb` file through the below mentioned command. For OS installations, check the [website](https://hyper.is/)
 
-{: .box-note}
+{: .notice--info}
 **Note:** We can run hyper terminal through `.AppImage` in Linux distros if we want to try it out without installing.
 
 ```bash

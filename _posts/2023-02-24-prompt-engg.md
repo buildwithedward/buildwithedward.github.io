@@ -1,11 +1,9 @@
 ---
-layout: post
-title: Prompt Engineering - Intro 
-subtitle: Make AI to dance to your tune!
-#cover-img: /assets/img/flatpak.jpg
-thumbnail-img: /assets/img/prompts.jpg
-share-img: /assets/img/prompts.jpg
-permalink: /blog/prompt-engg/
+layout: single
+title: "Prompt Engineering - Intro"
+excerpt: "Make AI to dance to your tune!"
+header:
+  teaser: /assets/img/prompts.jpg
 tags: [llms]
 ---
 

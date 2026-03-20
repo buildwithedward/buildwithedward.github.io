@@ -1,10 +1,7 @@
 ---
-layout: post
-title: Sample blog post
-subtitle: Each post also has a subtitle
-# gh-repo: daattali/beautiful-jekyll
-# gh-badge: [star, fork, follow]
-permalink: /blog/sample/
+layout: single
+title: "Sample blog post"
+excerpt: "Each post also has a subtitle"
 tags: [test]
 comments: true
 ---
@@ -31,7 +28,7 @@ How about a yummy crepe?
 
 It can also be centered!
 
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
+![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .align-center}
 
 Here's a code chunk:
 
@@ -65,15 +62,15 @@ You can add notification, warning and error boxes like this:
 
 ### Notification
 
-{: .box-note}
+{: .notice--info}
 **Note:** This is a notification box.
 
 ### Warning
 
-{: .box-warning}
+{: .notice--warning}
 **Warning:** This is a warning box.
 
 ### Error
 
-{: .box-error}
+{: .notice--danger}
 **Error:** This is an error box.

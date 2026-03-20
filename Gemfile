@@ -1,8 +1,10 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-gemspec
+gem "minimal-mistakes-jekyll"
+gem "jekyll-include-cache"
 
-
-gem "webrick", "~> 1.7"
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-paginate"
+end

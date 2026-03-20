@@ -1,11 +1,9 @@
 ---
-layout: post
-title: Cloud Setup for Data Engineering 
-subtitle: Data Engineering Series - 1
-#cover-img: /assets/img/flatpak.jpg
-thumbnail-img: /assets/img/awslogo.jpg
-share-img: /assets/img/awslogo.jpg
-permalink: /blog/aws-ec2/
+layout: single
+title: "Cloud Setup for Data Engineering"
+excerpt: "Data Engineering Series - 1"
+header:
+  teaser: /assets/img/awslogo.jpg
 tags: [dataengg]
 ---
 
@@ -59,7 +57,7 @@ In this blog, we would see how to setup cloud and access via our local terminal.
 
 ### Accessing cloud via SSH from terminal {#ssh}
 
-{: .box-note}
+{: .notice--info}
 **Note:** This can be done through [puTTY](https://www.putty.org/) too.
 
 Copy/move the EC2 downloaded keypair to `.ssh` folder. Here I named my `.pem` file as `dataengg.pem`
@@ -122,5 +120,5 @@ logout
 Connection to xx.xxx.xxx.xxx closed.
 ```
 
-{: .box-warning}
+{: .notice--warning}
 **Warning:** It is wise to shut down our Instance once our job done to avoid unwanted bill from AWS.
