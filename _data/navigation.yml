@@ -1,9 +1,7 @@
 main:
   - title: "Home"
     url: /
-  - title: "Deep Learning"
-    url: /categories/deeplearning/
-  - title: "LLM Systems"
-    url: /categories/llm-systems/
+  - title: "Deep Learning & LLM Systems"
+    url: /categories/dl-llm-systems/
   - title: "About"
     url: /about/
