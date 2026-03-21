@@ -1,14 +1,12 @@
 ---
 layout: single
-title: "Day 1 - How Real AI Companies Set Up Their Dev Environment"
+title: "Day 1 of 247 - How Real AI Companies Set Up Their Dev Environment (And Why You Should Too)"
 excerpt: "Setting up the environment and mapping out the Deep Learning & LLM Systems landscape"
 categories: [dl-llm-systems]
 tags: [deep-learning, llm, systems-design]
 header:
   teaser: /assets/img/bgimage.png
 ---
-# Day 1 of 247: How Real AI Companies Set Up Their Dev Environment (And Why You Should Too)
-
 > *Part of my 247-day AI Engineering journey — learning in public, one hour a day, writing everything in plain English so beginners can follow along. The blog is written with the help of AI*
 
 ---
