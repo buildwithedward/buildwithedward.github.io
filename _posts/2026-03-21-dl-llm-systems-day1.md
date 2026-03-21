@@ -171,16 +171,6 @@ Four green tests. That's your proof the foundation is solid.
 
 ---
 
-## 🎯 Try It Yourself
-
-1. **🟢 Beginner:** Add a new field to `Settings` called `max_retries: int = Field(default=3)` and write a test that checks its default value is `3`. Run `make test` — it should still pass.
-
-2. **🟡 Intermediate:** Add a validator to `Settings` that raises a `ConfigurationError` if `environment` is set to anything other than `"development"`, `"staging"`, or `"production"`. Write two tests — one that passes a valid value, one that passes `"local"` and expects the error.
-
-3. **🔴 Advanced:** Write a `Makefile` target called `make docker-build` using a proper two-stage Dockerfile — a `builder` stage that installs dependencies, and a slim `python:3.11-slim` runtime stage that copies only what's needed. Verify the image runs `pytest` inside the container successfully.
-
----
-
 ## ✅ Today's One-Sentence Lesson
 
 A reproducible environment, typed configuration, custom exceptions, and tests from Day 1 eliminate an entire category of bugs before they can ever happen in production.
