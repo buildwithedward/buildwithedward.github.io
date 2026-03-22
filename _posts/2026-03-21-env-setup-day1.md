@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Day 1 of 290 - Setting Up Your ML Dev Environment (The Right Way)"
-excerpt: "Setting up the environment and mapping out the Deep Learning & LLM Systems landscape"
+excerpt: "Part of my 290-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
 tags: [deep-learning, llm, systems-design]
 header:
@@ -13,7 +13,7 @@ header:
 
 ## What Is This?
 
-Before you write a single line of machine learning code, you need the right tools installed correctly. This might sound boring, but it's actually one of the most important things a professional ML engineer does — because a bad setup wastes *days* of debugging time later.
+Before you write a single line of machine learning code, you need the right tools installed correctly. This might sound boring, but it's actually one of the most important things a professional ML engineer does - because a bad setup wastes *days* of debugging time later.
 
 At companies like Google, Meta, and every AI startup you've heard of, every engineer's machine is set up the same way. When you join a team, you run one setup script and your machine matches theirs exactly. Today you'll learn how to do that.
 
@@ -21,9 +21,9 @@ At companies like Google, Meta, and every AI startup you've heard of, every engi
 
 ## The Analogy
 
-Think of your computer as a kitchen. You could throw all your ingredients — flour, spices, oil — onto one counter and mix everything together on the same surface. It works, but it's chaos. Ingredients from one recipe contaminate another.
+Think of your computer as a kitchen. You could throw all your ingredients - flour, spices, oil - onto one counter and mix everything together on the same surface. It works, but it's chaos. Ingredients from one recipe contaminate another.
 
-A professional chef uses **separate, labelled containers** for each recipe. In Python, we call these **virtual environments**. Each project gets its own isolated container of Python libraries. When you're done, you delete the container — nothing breaks.
+A professional chef uses **separate, labelled containers** for each recipe. In Python, we call these **virtual environments**. Each project gets its own isolated container of Python libraries. When you're done, you delete the container - nothing breaks.
 
 ---
 
@@ -37,7 +37,7 @@ Always use a virtual environment. Always.
 
 ### What Is conda?
 
-**conda** is a tool that creates and manages virtual environments. We use **Miniforge** — the Apple Silicon (M1) native version. It's free and much faster on your Mac than the official Anaconda.
+**conda** is a tool that creates and manages virtual environments. We use **Miniforge** - the Apple Silicon (M1) native version. It's free and much faster on your Mac than the official Anaconda.
 
 ### What Is VS Code?
 
@@ -45,7 +45,7 @@ Always use a virtual environment. Always.
 
 ### What Is Jupyter?
 
-**Jupyter Notebook** lets you write code in small "cells" and run them one at a time. You see the output (numbers, charts, text) right below each cell. This is ideal for experiments — you can run one step at a time, inspect results, and continue.
+**Jupyter Notebook** lets you write code in small "cells" and run them one at a time. You see the output (numbers, charts, text) right below each cell. This is ideal for experiments - you can run one step at a time, inspect results, and continue.
 
 ---
 
@@ -69,7 +69,7 @@ This reproducibility is what separates amateur ML code from production ML code.
 brew install miniforge
 conda init zsh   # restarts your shell config
 
-# Close and reopen terminal, then verify — you should see (base) in your prompt
+# Close and reopen terminal, then verify - you should see (base) in your prompt
 
 # Install VS Code
 brew install --cask visual-studio-code
@@ -81,7 +81,7 @@ brew install --cask visual-studio-code
 # Create a Python 3.11 environment called ml-fundamentals
 conda create -n ml-fundamentals python=3.11 -y
 
-# Activate it — run this every time you start working
+# Activate it - run this every time you start working
 conda activate ml-fundamentals
 
 # Verify you're using the right Python
@@ -104,7 +104,7 @@ cd ~/neuralcorp-setup
 
 Create `hello_neuralcorp.py`:
 ```python
-# hello_neuralcorp.py — first Python script at NeuralCorp
+# hello_neuralcorp.py - first Python script at NeuralCorp
 import sys
 import platform
 
@@ -126,7 +126,7 @@ Machine: arm64
 
 Create `check_environment.py`:
 ```python
-# check_environment.py — confirms the environment is correctly set up
+# check_environment.py - confirms the environment is correctly set up
 import sys
 
 REQUIRED_MAJOR = 3
@@ -140,9 +140,9 @@ print("NeuralCorp Environment Check")
 print("=" * 40)
 
 if current_major == REQUIRED_MAJOR and current_minor >= REQUIRED_MINOR:
-    print(f"✅ Python {current_major}.{current_minor} — OK")
+    print(f"✅ Python {current_major}.{current_minor} - OK")
 else:
-    print(f"❌ Python {current_major}.{current_minor} found — need 3.11+")
+    print(f"❌ Python {current_major}.{current_minor} found - need 3.11+")
     print(f"   Fix: conda create -n ml-fundamentals python=3.11")
 
 print(f"\nEnvironment path:\n  {sys.executable}")
@@ -150,7 +150,7 @@ print(f"\nEnvironment path:\n  {sys.executable}")
 # Detect if we're inside a virtual environment (not bare system Python)
 in_venv = sys.prefix != sys.base_prefix
 if in_venv:
-    print("✅ Running inside a virtual environment — good!")
+    print("✅ Running inside a virtual environment - good!")
 else:
     print("⚠️  Not in a virtual environment. Run: conda activate ml-fundamentals")
 ```
@@ -164,11 +164,11 @@ python check_environment.py
 ========================================
 NeuralCorp Environment Check
 ========================================
-✅ Python 3.11 — OK
+✅ Python 3.11 - OK
 
 Environment path:
   /opt/homebrew/.../ml-fundamentals/bin/python
-✅ Running inside a virtual environment — good!
+✅ Running inside a virtual environment - good!
 ```
 
 ### 4. Start Jupyter
@@ -204,12 +204,12 @@ The two minutes you spend creating a virtual environment saves you two days of "
 
 ## 🔗 Up Next
 
-**Day 2:** Git & GitHub — version control for ML projects. You'll learn how to save every version of your code so you can always go back, and how to share code with teammates.
+**Day 2:** Git & GitHub - version control for ML projects. You'll learn how to save every version of your code so you can always go back, and how to share code with teammates.
 
 ---
 
 ## 📚 About This Series
 
-I'm learning AI Engineering from scratch — 1 hour a day, 290 days, everything documented in plain English.
+I'm learning AI Engineering from scratch - 1 hour a day, 290 days, everything documented in plain English.
 
 *Tags: `#AI` `#MachineLearning` `#Python` `#AIEngineering` `#Beginners` `#DevSetup` `#conda` `#VSCode` `#Jupyter`*
