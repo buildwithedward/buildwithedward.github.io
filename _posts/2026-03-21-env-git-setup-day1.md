@@ -13,7 +13,7 @@ header:
 
 ## What Is This?
 
-Before writing a single line of ML code, every professional engineer sets up a proper, reproducible development environment. Today I set up Python 3.11, VS Code with ML-specific extensions, Jupyter notebooks, conda/venv for environment isolation — and then immediately learned Git and GitHub so every project I build from here onwards is properly version-controlled. These two topics are combined in Day 1 of my 180-day plan because they go hand-in-hand: you set up your environment *and* track it in Git from the very first moment.
+Before writing a single line of ML code, every professional engineer sets up a proper, reproducible development environment. Today I set up Python 3.11, VS Code with ML-specific extensions, Jupyter notebooks, conda/venv for environment isolation - and then immediately learned Git and GitHub so every project I build from here onwards is properly version-controlled. These two topics are combined in Day 1 of my 180-day plan because they go hand-in-hand: you set up your environment *and* track it in Git from the very first moment.
 
 ---
 
@@ -21,17 +21,17 @@ Before writing a single line of ML code, every professional engineer sets up a p
 
 **Dev environment** is like a carpenter's workshop. Before you build anything, you set up your tools, organise your workbench, and make sure everything is where you expect it. A messy workshop produces messy furniture. A clean, organised workspace produces clean, reliable work.
 
-**Git** is the carpenter's job sheet — a written record of every decision made during the build. "On March 20, I added a drawer. On March 21, I sanded it down. On March 22, I decided to remove it." You can always look back at the job sheet and reconstruct exactly what happened — and undo it if needed.
+**Git** is the carpenter's job sheet - a written record of every decision made during the build. "On March 20, I added a drawer. On March 21, I sanded it down. On March 22, I decided to remove it." You can always look back at the job sheet and reconstruct exactly what happened - and undo it if needed.
 
 ---
 
 ## The Concepts Explained Simply
 
-### Python 3.11 — Why a Specific Version?
+### Python 3.11 - Why a Specific Version?
 
-Python is not just "Python" — there are versions: 3.9, 3.10, 3.11, 3.12. ML libraries (PyTorch, HuggingFace, scikit-learn) are tested against specific Python versions. Using the wrong version causes silent bugs or broken installs. For this curriculum, we pin **Python 3.11** throughout — it has the best library compatibility as of 2026.
+Python is not just "Python" - there are versions: 3.9, 3.10, 3.11, 3.12. ML libraries (PyTorch, HuggingFace, scikit-learn) are tested against specific Python versions. Using the wrong version causes silent bugs or broken installs. For this curriculum, we pin **Python 3.11** throughout - it has the best library compatibility as of 2026.
 
-### Virtual Environments — Isolated Workspaces per Project
+### Virtual Environments - Isolated Workspaces per Project
 
 Imagine you're working on two projects: Project A needs `numpy==1.24` and Project B needs `numpy==1.26`. If they share a single Python installation, one will always be broken.
 
@@ -56,7 +56,7 @@ My Computer
 | Docker | Manage containers without leaving your editor |
 | Even Better TOML | Syntax highlighting for `pyproject.toml` |
 
-### Git — The 3-Zone Model
+### Git - The 3-Zone Model
 
 Every change to your code lives in one of three places:
 
@@ -69,11 +69,11 @@ Working Directory  →  Staging Area  →  Repository (History)
 - **Staging Area**: changes you've selected for the next snapshot
 - **Repository**: permanent history of snapshots (commits)
 
-### GitHub — Your Engineering Portfolio
+### GitHub - Your Engineering Portfolio
 
-GitHub hosts your Git history in the cloud. Every public repository you push to GitHub is part of your **engineering portfolio** — hiring managers look at it. From Day 1, every project goes into a repo with a proper `README.md`, a `.gitignore`, and meaningful commit messages.
+GitHub hosts your Git history in the cloud. Every public repository you push to GitHub is part of your **engineering portfolio** - hiring managers look at it. From Day 1, every project goes into a repo with a proper `README.md`, a `.gitignore`, and meaningful commit messages.
 
-### The ML `.gitignore` — What Never Gets Committed
+### The ML `.gitignore` - What Never Gets Committed
 
 ```
 # Never commit these
@@ -95,7 +95,7 @@ mlruns/           ← MLflow runs
 Every engineer at Google, Meta, OpenAI, and every ML startup follows this exact pattern from Day 1 of any project:
 
 1. Create a repo with a `.gitignore` before writing a single line of code
-2. Use a virtual environment per project — never install globally
+2. Use a virtual environment per project - never install globally
 3. Pin all dependency versions in `requirements.txt` (`torch==2.3.0`, not just `torch`)
 4. Commit with descriptive messages: `"Add ResNet backbone to image classifier"` not `"update"`
 
@@ -108,7 +108,7 @@ A repo without these fundamentals is the first thing a senior engineer will flag
 ### 1. Install Python 3.11
 
 ```bash
-# macOS — install pyenv to manage Python versions
+# macOS - install pyenv to manage Python versions
 brew install pyenv
 
 # Install Python 3.11
@@ -152,7 +152,7 @@ pip install --upgrade pip
 # Install core ML libraries with exact versions
 pip install numpy==1.26.4 pandas==2.2.2 matplotlib==3.8.4 jupyter==1.0.0
 
-# Save exact versions to requirements.txt — this lets anyone recreate your environment
+# Save exact versions to requirements.txt - this lets anyone recreate your environment
 pip freeze > requirements.txt
 
 # Confirm it works
@@ -221,7 +221,7 @@ cat .gitignore | grep .env # confirms .env is ignored
 ## Common Mistakes
 
 **Mistake 1: Installing packages globally (without activating .venv first)**
-If your terminal prompt doesn't start with `(.venv)`, you're installing into the global Python — which will conflict with other projects. Always check the prompt before running `pip install`.
+If your terminal prompt doesn't start with `(.venv)`, you're installing into the global Python - which will conflict with other projects. Always check the prompt before running `pip install`.
 
 **Mistake 2: Committing `.venv/` to Git**
 The `.venv/` folder contains thousands of files and is 100–500MB. It should be in `.gitignore` (Python template adds it automatically). Anyone can recreate it from `requirements.txt` with `pip install -r requirements.txt`.
@@ -236,8 +236,8 @@ The `.venv/` folder contains thousands of files and is 100–500MB. It should be
 
 ## One-Sentence Lesson
 
-A properly configured environment and version-controlled codebase from Day 1 is the difference between a toy project and a professional one — everything you build for the next 179 days starts here.
+A properly configured environment and version-controlled codebase from Day 1 is the difference between a toy project and a professional one - everything you build for the next 179 days starts here.
 
 ---
 
-*Day 1 / 180 complete ✅ | Tomorrow: Linux Terminal + Google Colab & Kaggle — the two environments where all your ML work will run*
+*Day 1 / 180 complete ✅ | Tomorrow: Linux Terminal + Google Colab & Kaggle - the two environments where all your ML work will run*

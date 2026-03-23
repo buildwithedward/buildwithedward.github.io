@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Deep Learning & LLM Systems - 120 Days"
+title: "Deep Learning & LLM Systems - 180 Days"
 permalink: /categories/dl-llm-systems/
 author_profile: true
 ---

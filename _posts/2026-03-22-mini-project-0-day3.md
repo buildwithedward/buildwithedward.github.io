@@ -12,15 +12,15 @@ header:
 
 ## What Is This?
 
-Day 3 is arguably the most important day of Phase 0 — more important than Python or Git individually. Today I built the **NeuralCorp project scaffold**: a production-standard template that every single project for the next 177 days is cloned from. Every real ML team has a scaffold like this. It enforces consistent structure, automates quality checks, and ensures that code written on Day 3 looks identical in discipline to code written on Day 180.
+Day 3 is arguably the most important day of Phase 0 - more important than Python or Git individually. Today I built the **NeuralCorp project scaffold**: a production-standard template that every single project for the next 177 days is cloned from. Every real ML team has a scaffold like this. It enforces consistent structure, automates quality checks, and ensures that code written on Day 3 looks identical in discipline to code written on Day 180.
 
-This is also **Mini-Project MP-0** — the first of 12 mini-projects in the curriculum.
+This is also **Mini-Project MP-0** - the first of 12 mini-projects in the curriculum.
 
 ---
 
 ## The Analogy
 
-Think of the scaffold like the steel frame of a building before the walls go up. Every serious construction project starts with the same basic frame: foundation, beams, supports. You don't improvise the frame differently on each building — the frame is standard because it works, it's safe, and everyone on the team knows how to work with it.
+Think of the scaffold like the steel frame of a building before the walls go up. Every serious construction project starts with the same basic frame: foundation, beams, supports. You don't improvise the frame differently on each building - the frame is standard because it works, it's safe, and everyone on the team knows how to work with it.
 
 Every data scientist who "just wants to explore quickly" in a Jupyter notebook has at some point caused a production incident because their exploration code made it to production without a frame. The scaffold prevents that.
 
@@ -57,8 +57,8 @@ neuralcorp-project/
 │   ├── raw/               ← original data, never modified
 │   └── processed/         ← cleaned/transformed data
 ├── logs/                  ← runtime log files
-├── .env                   ← real secrets — NOT in Git
-├── .env.example           ← template showing required vars — IS in Git
+├── .env                   ← real secrets - NOT in Git
+├── .env.example           ← template showing required vars - IS in Git
 ├── .gitignore             ← what Git ignores
 ├── Dockerfile             ← multi-stage container definition
 ├── Makefile               ← shortcut commands (make test, make run)
@@ -67,20 +67,20 @@ neuralcorp-project/
 └── README.md              ← how to set up and run the project
 ```
 
-### Pydantic BaseSettings — Config Done Right
+### Pydantic BaseSettings - Config Done Right
 
 The most common beginner mistake: hardcoding config values directly in Python files.
 
 ```python
-# ❌ Wrong — hardcoded, insecure, breaks in different environments
+# ❌ Wrong - hardcoded, insecure, breaks in different environments
 API_KEY = "sk-abc123..."
 MODEL_PATH = "/Users/edward/models/model.pt"
 ```
 
-The production way is Pydantic `BaseSettings` — it reads from a `.env` file automatically:
+The production way is Pydantic `BaseSettings` - it reads from a `.env` file automatically:
 
 ```python
-# ✅ Right — reads from .env, typed, validated
+# ✅ Right - reads from .env, typed, validated
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
@@ -97,13 +97,13 @@ API_KEY=sk-abc123...
 MODEL_PATH=models/my_model.pt
 ```
 
-Your `.env.example` (committed to Git — shows teammates what vars are needed):
+Your `.env.example` (committed to Git - shows teammates what vars are needed):
 ```
 API_KEY=your-key-here
 MODEL_PATH=models/model.pt
 ```
 
-### Custom Exceptions — Self-Documenting Errors
+### Custom Exceptions - Self-Documenting Errors
 
 Never raise a bare `Exception("something went wrong")`. That tells you nothing. Custom exceptions make errors self-documenting:
 
@@ -117,7 +117,7 @@ raise ModelNotFoundError(f"No model file at: {path}")
 
 When you see `ModelNotFoundError` in a stack trace, you know exactly what happened and where to look.
 
-### Makefile — One-Word Commands for Everything
+### Makefile - One-Word Commands for Everything
 
 A `Makefile` is a file of named shortcuts. Instead of:
 ```bash
@@ -129,9 +129,9 @@ You type:
 make test
 ```
 
-Every teammate and every CI/CD pipeline uses the same commands. `make install`, `make test`, `make lint`, `make docker-build`, `make run` — these are standard across every NeuralCorp project.
+Every teammate and every CI/CD pipeline uses the same commands. `make install`, `make test`, `make lint`, `make docker-build`, `make run` - these are standard across every NeuralCorp project.
 
-### Multi-Stage Dockerfile — Small, Secure, Production-Ready
+### Multi-Stage Dockerfile - Small, Secure, Production-Ready
 
 A single-stage Dockerfile is easy to write but produces huge images (often 2–4GB) that are slow to push and have a large attack surface.
 
@@ -149,7 +149,7 @@ COPY src/ ./src/
 USER appuser                         # Never run as root in production
 ```
 
-### Code Quality Tools — Automated Discipline
+### Code Quality Tools - Automated Discipline
 
 | Tool | What It Does | When It Runs |
 |---|---|---|
@@ -164,9 +164,9 @@ USER appuser                         # Never run as root in production
 ## How Real Companies Use This
 
 - **Every ML team at a serious company** (Stripe, Airbnb, Cohere) uses a project scaffold like this. New engineers clone the template, not a blank folder.
-- **Code reviews at Google** will reject code that lacks type hints, docstrings, or tests — these aren't optional extras, they're table stakes.
+- **Code reviews at Google** will reject code that lacks type hints, docstrings, or tests - these aren't optional extras, they're table stakes.
 - **The Makefile pattern** is how GitHub Actions CI/CD pipelines work: `run: make test && make docker-build`. If `make test` fails, the build stops.
-- **Multi-stage Dockerfiles** are a production requirement — single-stage images routinely fail security scans at companies with security review gates.
+- **Multi-stage Dockerfiles** are a production requirement - single-stage images routinely fail security scans at companies with security review gates.
 
 ---
 
@@ -206,7 +206,7 @@ pip freeze > requirements.txt
 ### 2. Create `src/config.py`
 
 ```python
-"""config.py — Application configuration via Pydantic BaseSettings.
+"""config.py - Application configuration via Pydantic BaseSettings.
 
 All configuration is loaded from environment variables / .env file.
 Never hardcode values anywhere else in the codebase.
@@ -236,14 +236,14 @@ class Settings(BaseSettings):
     learning_rate: float = 1e-3
 
 
-# Single global instance — import this everywhere: from src.config import settings
+# Single global instance - import this everywhere: from src.config import settings
 settings = Settings()
 ```
 
 ### 3. Create `src/exceptions.py`
 
 ```python
-"""exceptions.py — Custom exception hierarchy for NeuralCorp projects.
+"""exceptions.py - Custom exception hierarchy for NeuralCorp projects.
 
 Using named exceptions makes errors self-documenting.
 Callers can catch exactly the exception they expect without
@@ -252,7 +252,7 @@ accidentally swallowing unrelated errors.
 
 
 class NeuralCorpBaseError(Exception):
-    """Base exception — all NeuralCorp errors inherit from this."""
+    """Base exception - all NeuralCorp errors inherit from this."""
 
 
 class DataValidationError(NeuralCorpBaseError):
@@ -274,7 +274,7 @@ class ConfigurationError(NeuralCorpBaseError):
 ### 4. Create `tests/test_config.py`
 
 ```python
-"""test_config.py — Tests for configuration loading."""
+"""test_config.py - Tests for configuration loading."""
 import pytest
 from src.config import Settings
 from src.exceptions import NeuralCorpBaseError, DataValidationError
@@ -380,17 +380,17 @@ clean:            ## Remove all build artefacts and caches
 FROM python:3.11-slim AS builder
 WORKDIR /app
 
-# Copy only requirements first — Docker caches this layer if requirements.txt
+# Copy only requirements first - Docker caches this layer if requirements.txt
 # doesn't change, so rebuilds are fast when you only change src/ code
 COPY requirements.txt .
 RUN pip install --prefix=/install --no-cache-dir -r requirements.txt
 
 # ── Stage 2: Runtime ─────────────────────────────────────────────────────────
-# Uses the same slim base — final image is much smaller than a single-stage build
+# Uses the same slim base - final image is much smaller than a single-stage build
 FROM python:3.11-slim AS runtime
 WORKDIR /app
 
-# Copy only the installed packages from builder — not the full pip cache
+# Copy only the installed packages from builder - not the full pip cache
 COPY --from=builder /install /usr/local
 
 # Copy application source code
@@ -407,7 +407,7 @@ CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
 ### 8. Create `.env.example` and `.env`
 
 ```bash
-# .env.example (committed to Git — shows what vars are needed)
+# .env.example (committed to Git - shows what vars are needed)
 cat > .env.example << 'EOF'
 PROJECT_NAME=NeuralCorp Project
 ENVIRONMENT=development
@@ -418,7 +418,7 @@ RANDOM_SEED=42
 LEARNING_RATE=0.001
 EOF
 
-# .env (NOT committed — your real values)
+# .env (NOT committed - your real values)
 cp .env.example .env
 ```
 
@@ -488,15 +488,15 @@ make docker-build
 docker images | grep neuralcorp-scaffold
 ```
 
-### Definition of Done — MP-0 Checklist
+### Definition of Done - MP-0 Checklist
 
 - [ ] `make lint` passes with zero errors
-- [ ] `make test` runs — all tests PASSED, coverage ≥80%
+- [ ] `make test` runs - all tests PASSED, coverage ≥80%
 - [ ] `make docker-build` produces a working image
-- [ ] `src/config.py` uses Pydantic `BaseSettings` — zero hardcoded values
+- [ ] `src/config.py` uses Pydantic `BaseSettings` - zero hardcoded values
 - [ ] `src/exceptions.py` has ≥4 custom exception classes
-- [ ] `.env` exists but is in `.gitignore` — not committed
-- [ ] `.env.example` is committed — shows all required vars
+- [ ] `.env` exists but is in `.gitignore` - not committed
+- [ ] `.env.example` is committed - shows all required vars
 - [ ] `requirements.txt` has pinned versions (`pip freeze > requirements.txt`)
 - [ ] Multi-stage `Dockerfile` with non-root `USER appuser`
 - [ ] `Makefile` has: `install`, `test`, `lint`, `format`, `docker-build`, `clean`
@@ -515,14 +515,14 @@ If you haven't run `make lint` locally, CI will fail on GitHub Actions and your 
 A single-stage Dockerfile that does `pip install -r requirements.txt` and then `COPY . .` will produce a 2–4GB image. The multi-stage pattern above produces 200–400MB. On AWS, you pay for every GB stored in ECR and every GB transferred. Multi-stage is not optional at production scale.
 
 **Mistake 4: Hardcoding any value that might change between environments**
-Development, staging, and production have different database URLs, API keys, model paths, and batch sizes. If any value is hardcoded in Python, you need a code change (and a deployment) to update it. If it's in `.env`, you just update the env var — no deployment needed.
+Development, staging, and production have different database URLs, API keys, model paths, and batch sizes. If any value is hardcoded in Python, you need a code change (and a deployment) to update it. If it's in `.env`, you just update the env var - no deployment needed.
 
 ---
 
 ## One-Sentence Lesson
 
-The 20 minutes spent building a proper scaffold on Day 3 saves 20 hours of refactoring later — every professional ML project is built on a template like this, and now so is mine.
+The 20 minutes spent building a proper scaffold on Day 3 saves 20 hours of refactoring later - every professional ML project is built on a template like this, and now so is mine.
 
 ---
 
-*Day 3 / 180 complete ✅ — Mini-Project MP-0 shipped 🎉 | Tomorrow: Python recap + OOP basics — the foundation of every PyTorch nn.Module*
+*Day 3 / 180 complete ✅ - Mini-Project MP-0 shipped 🎉 | Tomorrow: Python recap + OOP basics - the foundation of every PyTorch nn.Module*
