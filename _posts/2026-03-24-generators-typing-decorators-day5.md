@@ -14,12 +14,12 @@ header:
 
 Day 5 covers six Python superpowers that you'll use every single day as an ML engineer:
 
-1. **List Comprehensions** — build lists in one expressive line
-2. **Generators** — stream data lazily without loading it all into RAM
-3. **Decorators** — wrap functions with reusable behaviour (timing, retrying, validating)
-4. **Typing Hints** — label your functions so tools and teammates know what they expect
-5. **Dataclasses** — auto-generate boilerplate Python classes (great for ML configs)
-6. **pathlib** — handle file paths cleanly on any operating system
+1. **List Comprehensions** - build lists in one expressive line
+2. **Generators** - stream data lazily without loading it all into RAM
+3. **Decorators** - wrap functions with reusable behaviour (timing, retrying, validating)
+4. **Typing Hints** - label your functions so tools and teammates know what they expect
+5. **Dataclasses** - auto-generate boilerplate Python classes (great for ML configs)
+6. **pathlib** - handle file paths cleanly on any operating system
 
 ---
 
@@ -27,11 +27,11 @@ Day 5 covers six Python superpowers that you'll use every single day as an ML en
 
 **List comprehension** = an assembly line that transforms every item in one motion.
 
-**Generator** = a popcorn machine that makes one kernel at a time, only when you ask — instead of filling a bathtub with popcorn first.
+**Generator** = a popcorn machine that makes one kernel at a time, only when you ask - instead of filling a bathtub with popcorn first.
 
 **Decorator** = gift-wrapping a present. The present (your function) stays the same; the wrapping adds a bow (timing, retry logic, validation) without touching the present.
 
-**Typing hints** = the label on a food delivery box. You see "Burger: beef, bun, lettuce" before opening it — no surprises.
+**Typing hints** = the label on a food delivery box. You see "Burger: beef, bun, lettuce" before opening it - no surprises.
 
 **Dataclass** = a smart form template. Fill in the field names and types; Python writes the boring __init__, __repr__, __eq__ code for you.
 
@@ -70,10 +70,10 @@ Pattern: `[expression  for  item  in  iterable  if  condition]`
 A list stores ALL items in memory at once. A generator computes and hands you **one item at a time**.
 
 ```python
-# List — allocates ~8 MB for 1 million items
+# List - allocates ~8 MB for 1 million items
 big_list = [x * x for x in range(1_000_000)]
 
-# Generator expression — always ~104 bytes, regardless of size
+# Generator expression - always ~104 bytes, regardless of size
 big_gen  = (x * x for x in range(1_000_000))
 ```
 
@@ -122,10 +122,10 @@ train_epoch = timer(train_epoch)
 ```
 
 Common decorators you'll use in production ML:
-- `@torch.no_grad()` — disables gradient tracking during inference
-- `@lru_cache(maxsize=128)` — caches expensive computation results
-- `@app.get("/predict")` — registers a FastAPI route handler
-- `@retry(max_attempts=3)` — auto-retries failed LLM API calls
+- `@torch.no_grad()` - disables gradient tracking during inference
+- `@lru_cache(maxsize=128)` - caches expensive computation results
+- `@app.get("/predict")` - registers a FastAPI route handler
+- `@retry(max_attempts=3)` - auto-retries failed LLM API calls
 
 ---
 
@@ -143,7 +143,7 @@ def preprocess_texts(
     ...
 ```
 
-Python doesn't enforce these at runtime — they're labels for humans and tools. Tools like **mypy** and **pyright** (built into VS Code) will catch type errors before you run the code.
+Python doesn't enforce these at runtime - they're labels for humans and tools. Tools like **mypy** and **pyright** (built into VS Code) will catch type errors before you run the code.
 
 From Python 3.10+ you can use the cleaner union syntax:
 ```python
@@ -155,7 +155,7 @@ def load(path: str | None = None) -> list[float]:
 
 ### Dataclasses
 
-Without dataclass — lots of boilerplate:
+Without dataclass - lots of boilerplate:
 ```python
 class TrainingConfig:
     def __init__(self, lr, batch_size, epochs):
@@ -166,7 +166,7 @@ class TrainingConfig:
         return f"TrainingConfig(lr={self.lr}, ...)"  # tedious
 ```
 
-With `@dataclass` — Python writes all of that for you:
+With `@dataclass` - Python writes all of that for you:
 ```python
 from dataclasses import dataclass, field
 
@@ -187,12 +187,12 @@ Add `frozen=True` to make the config immutable (great for experiment reproducibi
 
 ### pathlib
 
-Old string approach — fragile:
+Old string approach - fragile:
 ```python
 path = "data/" + "raw/" + "train.csv"  # Breaks on Windows (\\ vs /)
 ```
 
-pathlib approach — clean and cross-platform:
+pathlib approach - clean and cross-platform:
 ```python
 from pathlib import Path
 
@@ -218,7 +218,7 @@ text = Path("README.md").read_text(encoding="utf-8")
 
 - **Netflix / Spotify** data pipelines: list comprehensions to build feature vectors from event logs in seconds
 - **OpenAI / Anthropic** training loops: generator-based data loaders stream terabytes of text without memory overflow
-- **Every FastAPI endpoint at any ML company**: uses `@app.post("/predict")` — a decorator registering the route
+- **Every FastAPI endpoint at any ML company**: uses `@app.post("/predict")` - a decorator registering the route
 - **Google DeepMind** configs: Pydantic models (dataclass-like) store all hyperparameters, logged to W&B as a dict
 - **AWS SageMaker** training scripts: pathlib used to construct paths to S3-mounted training data directories
 
@@ -241,7 +241,7 @@ DATA_DIR=./data
 LOG_LEVEL=INFO' > .env
 ```
 
-### Quick Demo — Try Each Concept
+### Quick Demo - Try Each Concept
 
 **1. List comprehensions:**
 ```python
@@ -350,7 +350,7 @@ All code above runs without errors. Memory demo shows generator is ~80,000x smal
 
 ## ☁️ Cloud Note
 
-Everything in Day 5 is pure Python — no GPU needed. Runs perfectly on your M1 MacBook Air. No Colab or RunPod required today.
+Everything in Day 5 is pure Python - no GPU needed. Runs perfectly on your M1 MacBook Air. No Colab or RunPod required today.
 
 ---
 
@@ -374,7 +374,7 @@ Fix: Infinite generators (`while True` + `yield`) need you to stop them. Use:
 import itertools
 first_10_batches = list(itertools.islice(infinite_gen, 10))
 ```
-Why: Generators don't stop themselves — the caller controls when to stop.
+Why: Generators don't stop themselves - the caller controls when to stop.
 
 ---
 
@@ -384,10 +384,10 @@ pathlib.Path.glob() returns [] but files exist
 ```
 Fix: Use `rglob()` for recursive search across all subdirectories.
 ```python
-# Wrong — only immediate directory
+# Wrong - only immediate directory
 files = Path("data").glob("*.csv")
 
-# Correct — searches all subdirectories too
+# Correct - searches all subdirectories too
 files = Path("data").rglob("*.csv")
 ```
 Why: `glob()` is one level deep; `rglob()` adds `**/` recursion automatically.
@@ -396,4 +396,4 @@ Why: `glob()` is one level deep; `rglob()` adds `**/` recursion automatically.
 
 ## One-Sentence Lesson
 
-List comprehensions, generators, decorators, type hints, dataclasses, and pathlib are the six Pythonic tools you'll use in nearly every single ML engineering file you write — master them now and every phase ahead gets dramatically easier.
+List comprehensions, generators, decorators, type hints, dataclasses, and pathlib are the six Pythonic tools you'll use in nearly every single ML engineering file you write - master them now and every phase ahead gets dramatically easier.
