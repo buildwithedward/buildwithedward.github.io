@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Day 9 of 180 - Data Visualisation"
+title: "Day 9 of 180 - Probability & Statistics"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
 tags: [deep-learning, llm, systems-design]

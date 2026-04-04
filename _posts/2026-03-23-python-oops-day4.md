@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Day 4 of 180 - Python Foundations - Collections, Control Flow & Object-Oriented Programming"
+title: "Day 4 of 180 - Collections, Control Flow & Object-Oriented Programming"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
 tags: [deep-learning, llm, systems-design]
