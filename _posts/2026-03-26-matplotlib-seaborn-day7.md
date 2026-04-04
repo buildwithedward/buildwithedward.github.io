@@ -12,11 +12,11 @@ header:
 
 ## Introduction
 
-Today marks a pivotal shift in how we write code. Up until now, you've been using `print()` to see what your programs do. Starting today, you'll graduate to **logging** — the production-standard way that real engineers observe their code.
+Today marks a pivotal shift in how we write code. Up until now, you've been using `print()` to see what your programs do. Starting today, you'll graduate to **logging** - the production-standard way that real engineers observe their code.
 
 Here's why this matters: Imagine you deploy a data analysis script to production, and it processes 1 million customer records at 3 AM. Something goes wrong. With `print()`, your output scrolls off the screen and you have no record of what happened. With `logging`, you have a timestamped, categorized, searchable log file that tells you exactly what went wrong, when, and what led up to it.
 
-By the end of today, you'll also have **beautiful, publication-quality plots** using Matplotlib and Seaborn. But logging comes first — it's the more important production skill.
+By the end of today, you'll also have **beautiful, publication-quality plots** using Matplotlib and Seaborn. But logging comes first - it's the more important production skill.
 
 ---
 
@@ -32,7 +32,7 @@ pip install matplotlib==3.8.2 seaborn==0.13.1 python-json-logger==2.0.7
 
 ---
 
-## Part 1: Python Logging — Your New Production Standard
+## Part 1: Python Logging - Your New Production Standard
 
 ### 1.1 The Problem with `print()`
 
@@ -47,11 +47,11 @@ print("Finished!")
 ```
 
 **Problems:**
-1. **No severity levels** — All output looks the same. Can't tell warnings from errors from normal info.
-2. **No timestamps** — When exactly did that error happen? Was it 3 AM or 3 PM?
-3. **No filtering** — In development, you want DEBUG messages. In production, they're noise. Can't easily toggle.
-4. **Console-only** — Output disappears when the terminal closes. Can't analyze later.
-5. **Not machine-readable** — Can't pipe to log aggregation tools (Datadog, Splunk, CloudWatch).
+1. **No severity levels** - All output looks the same. Can't tell warnings from errors from normal info.
+2. **No timestamps** - When exactly did that error happen? Was it 3 AM or 3 PM?
+3. **No filtering** - In development, you want DEBUG messages. In production, they're noise. Can't easily toggle.
+4. **Console-only** - Output disappears when the terminal closes. Can't analyze later.
+5. **Not machine-readable** - Can't pipe to log aggregation tools (Datadog, Splunk, CloudWatch).
 
 ### 1.2 The Solution: `logging` Module
 
@@ -69,11 +69,11 @@ logger.info("Finished!")
 ```
 
 **Benefits:**
-1. ✅ **5 levels** (DEBUG, INFO, WARNING, ERROR, CRITICAL) — you choose the severity
-2. ✅ **Automatic timestamps** — 2026-03-30 14:32:05,123 on every message
-3. ✅ **Filterable** — One config change hides DEBUG noise in production
-4. ✅ **Multi-destination** — Send to console AND file simultaneously
-5. ✅ **Machine-readable** — Convert to JSON for real log systems
+1. ✅ **5 levels** (DEBUG, INFO, WARNING, ERROR, CRITICAL) - you choose the severity
+2. ✅ **Automatic timestamps** - 2026-03-30 14:32:05,123 on every message
+3. ✅ **Filterable** - One config change hides DEBUG noise in production
+4. ✅ **Multi-destination** - Send to console AND file simultaneously
+5. ✅ **Machine-readable** - Convert to JSON for real log systems
 
 ### 1.3 The 5 Log Levels (Traffic Light Analogy)
 
@@ -239,7 +239,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-# Silence the requests library — only show WARNING and above
+# Silence the requests library - only show WARNING and above
 logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
@@ -303,7 +303,7 @@ Now tools like Datadog can parse this, create alerts ("if rows_processed < 1000,
 
 ---
 
-## Part 2: Matplotlib — Create Publication-Quality Plots
+## Part 2: Matplotlib - Create Publication-Quality Plots
 
 ### 2.1 Object-Oriented API vs State Machine
 
@@ -332,7 +332,7 @@ plt.close(fig)
 
 **Why OO wins:**
 - **Explicit control**: Every element is an object you control
-- **Works everywhere**: Scripts, servers, notebooks, Docker — anywhere
+- **Works everywhere**: Scripts, servers, notebooks, Docker - anywhere
 - **Subplots are easy**: Just use `plt.subplots(2, 2)` for a 2×2 grid
 - **No GUI needed**: Can run on servers without a display
 
@@ -436,7 +436,7 @@ plt.close(fig)
 
 ---
 
-## Part 3: Seaborn — Statistical Plots Made Easy
+## Part 3: Seaborn - Statistical Plots Made Easy
 
 Seaborn builds on Matplotlib. It makes **statistical plots easier** and **prettier by default**.
 
@@ -566,13 +566,13 @@ def setup_logging(log_file: str = "output/analysis.log") -> logging.Logger:
     logger = logging.getLogger("data_analysis")
     logger.setLevel(logging.DEBUG)
 
-    # Console handler (INFO and above only — clean output for user)
+    # Console handler (INFO and above only - clean output for user)
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
     console_formatter = logging.Formatter('%(levelname)-8s | %(message)s')
     console_handler.setFormatter(console_formatter)
 
-    # File handler (DEBUG and above — detailed logs for debugging)
+    # File handler (DEBUG and above - detailed logs for debugging)
     file_handler = RotatingFileHandler(
         log_file,
         maxBytes=5_000_000,  # Rotate at 5 MB

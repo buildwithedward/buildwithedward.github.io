@@ -44,7 +44,7 @@ All code files go in this directory.
 
 ---
 
-## Part 1: Linear Algebra — The Language of AI
+## Part 1: Linear Algebra - The Language of AI
 
 ### Scalars, Vectors, Matrices
 
@@ -79,7 +79,7 @@ A =  [4  5  6]
 3 × [2, 4, 6] = [6, 12, 18]
 ```
 
-#### Vector Magnitude (Norm) — The "Length" of a Vector
+#### Vector Magnitude (Norm) - The "Length" of a Vector
 
 The magnitude tells you how long a vector is:
 
@@ -94,7 +94,7 @@ Example: The vector [3, 4] has magnitude:
 
 This is just the Pythagorean theorem!
 
-### Dot Product — The Most Important Operation in AI
+### Dot Product - The Most Important Operation in AI
 
 The dot product of two vectors is computed as:
 
@@ -119,7 +119,7 @@ This is used EVERYWHERE in AI:
 - **Neural networks:** Computing neuron outputs
 - **Attention mechanisms:** Measuring how relevant one word is to another
 
-### Cosine Similarity — Using Dot Product for Similarity
+### Cosine Similarity - Using Dot Product for Similarity
 
 We can normalize the dot product to get a number between -1 and +1:
 
@@ -187,7 +187,7 @@ A × A⁻¹ = I
 (Like division: x × (1/x) = 1)
 ```
 
-Not all matrices have inverses. Those that don't are called "singular" — no unique solution when solving Ax = b.
+Not all matrices have inverses. Those that don't are called "singular" - no unique solution when solving Ax = b.
 
 **Eigenvalues & Eigenvectors:**
 
@@ -204,7 +204,7 @@ v = eigenvector (the vector itself)
 
 ---
 
-## Part 2: Calculus — The Rate of Change
+## Part 2: Calculus - The Rate of Change
 
 ### What IS a Derivative?
 
@@ -259,7 +259,7 @@ Or using the product rule:
 = 5x⁴ ✓
 ```
 
-#### Chain Rule — The Most Important for AI
+#### Chain Rule - The Most Important for AI
 
 ```
 d/dx(f(g(x))) = f'(g(x)) × g'(x)
@@ -306,7 +306,7 @@ This vector points "uphill" the fastest.
 
 If you want to find the minimum, move **opposite** to the gradient.
 
-### Gradient Descent — The Heart of AI Training
+### Gradient Descent - The Heart of AI Training
 
 Gradient descent is an algorithm that minimizes a function by taking steps opposite to the gradient.
 
@@ -798,6 +798,6 @@ INFO: Plot saved to gradient_descent.png
 
 ## What's Next
 
-**Day 9:** Probability & Statistics — You'll learn distributions, Bayes' theorem, and why probability underpins uncertainty in AI. Same logging and type hints standards continue!
+**Day 9:** Probability & Statistics - You'll learn distributions, Bayes' theorem, and why probability underpins uncertainty in AI. Same logging and type hints standards continue!
 
 ---

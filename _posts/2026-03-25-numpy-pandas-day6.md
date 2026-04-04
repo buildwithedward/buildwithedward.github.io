@@ -49,7 +49,7 @@ print(f"Pandas version: {pd.__version__}")
  
 ---
  
-## Part 1: NumPy — Fast Arrays
+## Part 1: NumPy - Fast Arrays
  
 ### The Problem: Speed
  
@@ -144,13 +144,13 @@ random_arr = np.random.randn(3, 3)
 arr = np.array([[1, 2, 3], [4, 5, 6]])
  
 # How many rows and columns?
-arr.shape  # (2, 3) — 2 rows, 3 columns
+arr.shape  # (2, 3) - 2 rows, 3 columns
  
 # What type of data?
-arr.dtype  # dtype('int64') — integer, 64-bit
+arr.dtype  # dtype('int64') - integer, 64-bit
  
 # How many dimensions?
-arr.ndim   # 2 — it's a table (2D)
+arr.ndim   # 2 - it's a table (2D)
  
 # Total number of elements?
 arr.size   # 6
@@ -368,7 +368,7 @@ np.linalg.norm(A)  # 5.477
  
 ---
  
-## Part 2: Pandas — Working with Real Data
+## Part 2: Pandas - Working with Real Data
  
 ### From Arrays to Tables
  
@@ -449,7 +449,7 @@ df = pd.DataFrame(data)
  
 ```python
 # How big is it?
-df.shape  # (4, 5) — 4 rows, 5 columns
+df.shape  # (4, 5) - 4 rows, 5 columns
  
 # What are the column names?
 df.columns  # ['Name', 'Grade', 'Math', 'Science', 'English']
@@ -1205,6 +1205,6 @@ Grade
 **Data Visualization: Matplotlib + Seaborn + Logging Module**
  
 On Day 7, you'll learn:
-1. **Matplotlib** — create line plots, bar charts, scatter plots
-2. **Seaborn** — make beautiful statistical visualizations
-3. **Logging module** — replace `print()` with professional logging
+1. **Matplotlib** - create line plots, bar charts, scatter plots
+2. **Seaborn** - make beautiful statistical visualizations
+3. **Logging module** - replace `print()` with professional logging
