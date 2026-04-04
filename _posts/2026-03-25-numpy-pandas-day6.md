@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Day 5 of 180 - Numpy & Pandas"
+title: "Day 6 of 180 - Numpy & Pandas"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
 tags: [deep-learning, llm, systems-design]
