@@ -2,7 +2,6 @@
 layout: single
 title: "Reverse Engineering an MCP-Based Job Application (Without Instructions)"
 excerpt: "How I cracked an unconventional job application that gave me nothing but a URL"
-categories: [dl-llm-systems]
 tags: [engineering, oauth, debugging, systems, mcp, backend, ai]
 header:
   teaser: /assets/img/mcp.jpg
