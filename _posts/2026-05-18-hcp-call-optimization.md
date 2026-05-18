@@ -21,7 +21,7 @@ That sent me down a rabbit hole of **explainable AI, causal thinking, and a mode
 
 ---
 
-## The Business Problem (In Plain English)
+## The Business Problem
 
 In the pharma world, **HCP** stands for Healthcare Provider - basically, the doctors that sales representatives visit to promote drugs.
 
@@ -48,7 +48,7 @@ This led me to **GAM - Generalized Additive Models.**
 
 ---
 
-## What is a GAM? (The Plain-English Version)
+## What is a GAM?
 
 You've probably seen linear regression:
 
