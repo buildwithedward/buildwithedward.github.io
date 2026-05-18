@@ -2,7 +2,6 @@
 layout: single
 title: "How I Built an Explainable AI System to Optimize Pharma Sales Calls"
 excerpt: "When a client said 'no black boxes', I discovered GAM - and it changed how I think about enterprise ML"
-categories: [dl-llm-systems]
 tags: [mlops, explainable-ai, gam, pharma, fastapi, mlflow, python]
 header:
   teaser: /assets/img/bgimage.png
