@@ -1,6 +1,24 @@
 ---
-layout: home
-author_profile: true
+layout: single
+author_profile: false
+classes: wide
 ---
 
-<p>Welcome to my blog — I document my hands-on journey through <strong>Deep Learning</strong> and <strong>LLM Systems</strong>, 180 days each, alongside real-world AI engineering notes.</p>
+<div class="homepage">
+
+  <div class="homepage-intro">
+    <p>Hi, I'm <strong>Edward Praveen</strong> — a Senior ML Engineer and AI Architect focused on building production-grade AI systems.</p>
+    <p>I write about LLMs, RAG pipelines, multi-agent systems, MLOps, and scalable infrastructure on AWS. This blog documents my 180-day hands-on journey through Deep Learning and LLM Systems — one day at a time.</p>
+  </div>
+
+  <p class="homepage-section-title">Latest Writing</p>
+  <ul class="post-list">
+    {% for post in site.posts limit:20 %}
+    <li>
+      <span class="post-list__date">{{ post.date | date: "%Y %b" }}</span>
+      <a class="post-list__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>

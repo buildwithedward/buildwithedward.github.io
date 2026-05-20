@@ -1,0 +1,191 @@
+---
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ── Typography ──────────────────────────────────────────────── */
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+.page__content {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #222;
+
+  p, li {
+    font-size: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+  }
+
+  a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-decoration-color: #bbb;
+    text-underline-offset: 3px;
+
+    &:hover {
+      text-decoration-color: #333;
+    }
+  }
+}
+
+/* ── Masthead / Navigation ───────────────────────────────────── */
+
+.masthead {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+  box-shadow: none;
+}
+
+.masthead__inner-wrap {
+  padding: 0.8rem 1rem;
+}
+
+.site-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: -0.02em;
+  color: #111 !important;
+}
+
+.greedy-nav {
+  background: transparent;
+
+  a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.82em;
+    letter-spacing: 0.03em;
+    color: #555;
+    padding: 0.5rem 0.75rem;
+
+    &:hover {
+      color: #111;
+    }
+  }
+
+  .visible-links a:before {
+    background: #333;
+  }
+}
+
+/* ── Page / Post layout ──────────────────────────────────────── */
+
+.page__title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  color: #111;
+}
+
+.page__meta,
+.page__date {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  color: #888;
+}
+
+/* ── Homepage ────────────────────────────────────────────────── */
+
+.homepage {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.homepage-intro {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.05em;
+  line-height: 1.85;
+  color: #333;
+  margin-bottom: 2.5rem;
+
+  strong {
+    color: #111;
+  }
+
+  a {
+    color: #333;
+    text-decoration: underline;
+    text-decoration-color: #bbb;
+    text-underline-offset: 3px;
+
+    &:hover {
+      text-decoration-color: #333;
+    }
+  }
+}
+
+.homepage-section-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    padding: 0.45rem 0;
+  }
+}
+
+.post-list__date {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  font-size: 0.78em;
+  color: #aaa;
+  white-space: nowrap;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.post-list__link {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.97em;
+  color: #222;
+  text-decoration: none;
+  line-height: 1.4;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #aaa;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+
+.page__footer {
+  background-color: #fafafa;
+  border-top: 1px solid #ebebeb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: #aaa;
+}
