@@ -1,13 +1,13 @@
 ---
-layout: post
-title: "From GitHub Pages to a Real Domain — How I Finally Claimed edwardpraveen.com"
+layout: single
+title: "From GitHub Pages to a Real Domain - How I Finally Claimed edwardpraveen.com"
 date: 2026-05-24
 categories: [devops, infrastructure]
 tags: [devops, github-pages, dns, namecheap, aws, blogging, infrastructure]
 excerpt: "A step-by-step account of moving my technical blog off a github.io subdomain, the architecture decisions I weighed, and exactly what I clicked (and skipped) along the way."
 ---
 
-I've been meaning to do this for a long time. My blog has been sitting at `buildwithedward.github.io` for years — functional, free, and completely forgettable as a URL. If I'm going to write seriously about production AI systems and infra, the least I can do is own my own domain.
+I've been meaning to do this for a long time. My blog has been sitting at `buildwithedward.github.io` for years - functional, free, and completely forgettable as a URL. If I'm going to write seriously about production AI systems and infra, the least I can do is own my own domain.
 
 This week I finally did it. Here's exactly how it went.
 
@@ -15,7 +15,7 @@ This week I finally did it. Here's exactly how it went.
 
 ## The itch: why a custom domain now?
 
-The github.io URL always felt temporary. It's fine when you're experimenting, but I'm now writing about real production topics — RAG pipelines, LLM inference, AWS architecture, client RFP approaches. A personal domain signals that this is a real, long-term effort. It's also just easier to share verbally: *"edwardpraveen.com"* versus *"buildwithedward dot github dot io."*
+The github.io URL always felt temporary. It's fine when you're experimenting, but I'm now writing about real production topics - RAG pipelines, LLM inference, AWS architecture, client RFP approaches. A personal domain signals that this is a real, long-term effort. It's also just easier to share verbally: *"edwardpraveen.com"* versus *"buildwithedward dot github dot io."*
 
 ---
 
@@ -23,7 +23,7 @@ The github.io URL always felt temporary. It's fine when you're experimenting, bu
 
 Before buying anything, I thought through the two realistic paths.
 
-### Option 1 — Move hosting to AWS (S3 + CloudFront + Route 53)
+### Option 1 - Move hosting to AWS (S3 + CloudFront + Route 53)
 
 **Advantages:**
 - Full control over CDN behaviour, caching rules, and redirects
@@ -36,10 +36,10 @@ Before buying anything, I thought through the two realistic paths.
 - More moving parts to maintain for what is ultimately a static site
 - Overkill for a Jekyll blog that rebuilds on every push
 
-### Option 2 — Keep GitHub Pages, add a custom domain ✓ *Chosen*
+### Option 2 - Keep GitHub Pages, add a custom domain ✓ *Chosen*
 
 **Advantages:**
-- GitHub handles SSL automatically via Let's Encrypt — no cost, no renewal headache
+- GitHub handles SSL automatically via Let's Encrypt - no cost, no renewal headache
 - Zero infrastructure to manage
 - The old `buildwithedward.github.io` URL auto-redirects to the new domain
 - Domain cost only (~$10/yr)
@@ -48,7 +48,7 @@ Before buying anything, I thought through the two realistic paths.
 - No server-side logic or edge functions
 - GitHub Pages uptime is tied to GitHub's infrastructure (historically excellent)
 
-**Why I chose this:** AWS makes sense when you need custom server-side behaviour, granular CDN control, or want everything under one account for compliance reasons. For a static Jekyll blog, GitHub Pages does everything needed. Right tool for the job — no point adding complexity to a solved problem.
+**Why I chose this:** AWS makes sense when you need custom server-side behaviour, granular CDN control, or want everything under one account for compliance reasons. For a static Jekyll blog, GitHub Pages does everything needed. Right tool for the job - no point adding complexity to a solved problem.
 
 ---
 
@@ -58,10 +58,10 @@ I went with Namecheap and grabbed `edwardpraveen.com`. The checkout page, as alw
 
 | Add-on | Cost | Verdict |
 |--------|------|---------|
-| SSL Certificate | ~$15–50/yr | ❌ Skip — GitHub Pages gives free SSL via Let's Encrypt. ACM is also free if you move to AWS later. |
-| Premium DNS | ~$5/yr | ❌ Skip — BasicDNS is perfectly adequate for a personal blog. Premium adds DDoS protection you don't need. |
-| Sitelock Website Security | ~$20/yr | ❌ Skip — Sitelock scans PHP/WordPress sites for malware. A static Jekyll site has nothing to infect. |
-| Business Email | ~$15/yr | ⚠️ Optional — worth it for `edward@edwardpraveen.com`, but Zoho Mail has a free tier for one custom address. |
+| SSL Certificate | ~$15–50/yr | ❌ Skip - GitHub Pages gives free SSL via Let's Encrypt. ACM is also free if you move to AWS later. |
+| Premium DNS | ~$5/yr | ❌ Skip - BasicDNS is perfectly adequate for a personal blog. Premium adds DDoS protection you don't need. |
+| Sitelock Website Security | ~$20/yr | ❌ Skip - Sitelock scans PHP/WordPress sites for malware. A static Jekyll site has nothing to infect. |
+| Business Email | ~$15/yr | ⚠️ Optional - worth it for `edward@edwardpraveen.com`, but Zoho Mail has a free tier for one custom address. |
 
 Total checkout: ~$10 for the domain alone.
 
@@ -71,7 +71,7 @@ Total checkout: ~$10 for the domain alone.
 
 Once the domain was registered, the changes were split across two places.
 
-### Namecheap — Advanced DNS
+### Namecheap - Advanced DNS
 
 Namecheap pre-populates two default records out of the box:
 - A CNAME pointing `www` to `parkingpage.namecheap.com`
@@ -96,7 +96,7 @@ Then add the following:
 |------|------|-------|
 | CNAME Record | www | buildwithedward.github.io. |
 
-> Note the trailing dot after `.github.io.` — include it exactly as shown.
+> Note the trailing dot after `.github.io.` - include it exactly as shown.
 
 ### GitHub repository
 
@@ -117,7 +117,7 @@ Then add the following:
 
 Commit and push. GitHub rebuilds the site and the SSL cert provisions automatically within ~30 minutes.
 
-> The old `buildwithedward.github.io` URL automatically issues a **301 redirect** to `edwardpraveen.com` once the custom domain is set — no extra config needed.
+> The old `buildwithedward.github.io` URL automatically issues a **301 redirect** to `edwardpraveen.com` once the custom domain is set - no extra config needed.
 
 ### Verify everything works
 
@@ -135,14 +135,14 @@ You can monitor DNS propagation in real time at [dnschecker.org](https://dnschec
 
 ## What's next for this blog
 
-The domain was the activation energy I needed. Going forward, I'm planning to publish weekly — covering the things I'm actually working on:
+The domain was the activation energy I needed. Going forward, I'm planning to publish weekly - covering the things I'm actually working on:
 
-**Infrastructure and DevOps** — real-world AWS architectures, ECS deployments, CI/CD pipelines, IaC patterns. The kind of end-to-end walkthroughs I wish existed when I was setting things up.
+**Infrastructure and DevOps** - real-world AWS architectures, ECS deployments, CI/CD pipelines, IaC patterns. The kind of end-to-end walkthroughs I wish existed when I was setting things up.
 
-**AI/ML engineering** — LLM inference optimization, RAG pipeline design, multi-agent orchestration. Practical content grounded in production constraints, not toy examples.
+**AI/ML engineering** - LLM inference optimization, RAG pipeline design, multi-agent orchestration. Practical content grounded in production constraints, not toy examples.
 
-**Architecture approaches from client RFPs** — I've been involved in scoping and proposing systems for enterprise clients. I'll share the architectural thinking behind those proposals, with synthetic data where needed, so the reasoning is transferable even when the specifics can't be.
+**Architecture approaches from client RFPs** - I've been involved in scoping and proposing systems for enterprise clients. I'll share the architectural thinking behind those proposals, with synthetic data where needed, so the reasoning is transferable even when the specifics can't be.
 
 ---
 
-If you've been putting off claiming your own domain for a blog or portfolio, the barrier is genuinely low — one afternoon, ~$10, and a handful of DNS records. The github.io redirect means you lose nothing from your existing audience. There's no good reason to wait.
+If you've been putting off claiming your own domain for a blog or portfolio, the barrier is genuinely low - one afternoon, ~$10, and a handful of DNS records. The github.io redirect means you lose nothing from your existing audience. There's no good reason to wait.

@@ -3,7 +3,7 @@ layout: single
 title: "Day 6 of 180 - Numpy & Pandas"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
-tags: [deep-learning, llm, systems-design]
+tags: [python, numpy, pandas, data-science, data-engineering, ml-fundamentals]
 header:
   teaser: /assets/img/bgimage.png
 ---

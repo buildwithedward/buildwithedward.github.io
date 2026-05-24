@@ -3,7 +3,7 @@ layout: single
 title: "Day 9 of 180 - Probability & Statistics"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
-tags: [deep-learning, llm, systems-design]
+tags: [probability, statistics, bayesian, ml-math, data-science, deep-learning]
 header:
   teaser: /assets/img/bgimage.png
 ---

@@ -3,6 +3,7 @@ layout: single
 title: "Sample blog post"
 excerpt: "Each post also has a subtitle"
 tags: [test]
+categories: [archive]
 comments: true
 ---
 

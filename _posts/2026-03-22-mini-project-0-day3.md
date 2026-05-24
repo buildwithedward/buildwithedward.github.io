@@ -3,7 +3,7 @@ layout: single
 title: "Day 3 of 180 - ML Project Structure + NeuralCorp Scaffold (Mini-Project MP-0)"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
-tags: [deep-learning, llm, systems-design]
+tags: [python, ml-engineering, project-structure, best-practices, scaffold, mlops]
 header:
   teaser: /assets/img/bgimage.png
 ---

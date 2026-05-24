@@ -3,7 +3,7 @@ layout: single
 title: "Day 7 of 180 - Data Visualisation"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
-tags: [deep-learning, llm, systems-design]
+tags: [python, matplotlib, seaborn, data-visualization, logging, ml-engineering]
 header:
   teaser: /assets/img/bgimage.png
 ---

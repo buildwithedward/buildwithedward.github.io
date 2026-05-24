@@ -1,7 +1,11 @@
 main:
   - title: "Home"
     url: /
-  - title: "Deep Learning & LLM Systems"
+  - title: "Learning Track"
     url: /categories/dl-llm-systems/
+  - title: "Tags"
+    url: /tags/
+  - title: "Now"
+    url: /now/
   - title: "About"
     url: /about/

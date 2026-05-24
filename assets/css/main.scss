@@ -6,18 +6,24 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
+/* ── Variables ────────────────────────────────────────────────── */
+
+$accent: #2563eb;
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', Consolas, "Courier New", monospace;
+
 /* ── Typography ──────────────────────────────────────────────── */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: $font-sans;
   background-color: #ffffff;
   color: #222;
 }
 
 .page__content {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.05em;
-  line-height: 1.8;
+  font-family: $font-sans;
+  font-size: 0.95em;
+  line-height: 1.65;
   color: #222;
 
   p, li {
@@ -25,8 +31,8 @@ body {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-family: $font-sans;
+    font-weight: 700;
   }
 
   a {
@@ -36,8 +42,24 @@ body {
     text-underline-offset: 3px;
 
     &:hover {
-      text-decoration-color: #333;
+      color: $accent;
+      text-decoration-color: $accent;
     }
+  }
+
+  /* ── Code blocks ─────────────────────────────────────────────── */
+
+  pre, code {
+    font-family: $font-mono;
+  }
+
+  pre {
+    font-size: 0.875em;
+    line-height: 1.6;
+  }
+
+  code {
+    font-size: 0.9em;
   }
 }
 
@@ -54,7 +76,7 @@ body {
 }
 
 .site-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: $font-sans;
   font-weight: 700;
   font-size: 1em;
   letter-spacing: -0.02em;
@@ -65,36 +87,43 @@ body {
   background: transparent;
 
   a {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: $font-sans;
     font-size: 0.82em;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     color: #555;
     padding: 0.5rem 0.75rem;
 
     &:hover {
-      color: #111;
+      color: $accent;
     }
   }
 
   .visible-links a:before {
-    background: #333;
+    background: $accent;
   }
 }
 
 /* ── Page / Post layout ──────────────────────────────────────── */
 
 .page__title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: $font-sans;
   font-weight: 700;
-  font-size: 1.8em;
+  font-size: 2.2em;
   color: #111;
+  margin-top: 0.25em;
+  letter-spacing: -0.02em;
 }
 
 .page__meta,
 .page__date {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: $font-sans;
   font-size: 0.8em;
   color: #888;
+}
+
+/* un-hide read_time on wide layout */
+.layout--wide .page__meta {
+  display: block;
 }
 
 /* ── Homepage ────────────────────────────────────────────────── */
@@ -106,11 +135,11 @@ body {
 }
 
 .homepage-intro {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.05em;
-  line-height: 1.85;
+  font-family: $font-sans;
+  font-size: 0.93em;
+  line-height: 1.65;
   color: #333;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
 
   strong {
     color: #111;
@@ -123,13 +152,42 @@ body {
     text-underline-offset: 3px;
 
     &:hover {
-      text-decoration-color: #333;
+      color: $accent;
+      text-decoration-color: $accent;
     }
   }
 }
 
+.intro-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 0;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.intro-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #ebebeb;
+  margin-top: 0.15rem;
+}
+
+.intro-name {
+  color: $accent !important;
+  font-weight: 700;
+}
+
+/* ── Section title ───────────────────────────────────────────── */
+
 .homepage-section-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: $font-sans;
   font-size: 0.72em;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -137,8 +195,11 @@ body {
   color: #888;
   margin: 2rem 0 0.75rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 2px solid $accent;
+  display: inline-block;
 }
+
+/* ── Post list ───────────────────────────────────────────────── */
 
 .post-list {
   list-style: none;
@@ -149,31 +210,82 @@ body {
     display: flex;
     align-items: baseline;
     gap: 1.2rem;
-    padding: 0.45rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f5f5f5;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
 .post-list__date {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
-  font-size: 0.78em;
+  font-family: $font-mono;
+  font-size: 0.75em;
   color: #aaa;
   white-space: nowrap;
-  min-width: 80px;
+  min-width: 68px;
   flex-shrink: 0;
 }
 
+.post-list__body {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .post-list__link {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: $font-sans;
   font-size: 0.97em;
   color: #222;
   text-decoration: none;
   line-height: 1.4;
 
   &:hover {
+    color: $accent;
     text-decoration: underline;
-    text-decoration-color: #aaa;
+    text-decoration-color: rgba($accent, 0.4);
     text-underline-offset: 3px;
   }
+}
+
+.post-list__tag {
+  font-family: $font-sans;
+  font-size: 0.68em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $accent;
+  background: rgba($accent, 0.08);
+  border: 1px solid rgba($accent, 0.2);
+  border-radius: 4px;
+  padding: 0.1em 0.45em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── See all link ────────────────────────────────────────────── */
+
+.see-all-link {
+  font-family: $font-sans;
+  font-size: 0.82em;
+  color: $accent;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $accent;
+    text-underline-offset: 3px;
+  }
+}
+
+/* ── Figcaption (theme default is Georgia) ───────────────────── */
+
+figcaption {
+  font-family: $font-sans;
 }
 
 /* ── Footer ──────────────────────────────────────────────────── */
@@ -181,11 +293,16 @@ body {
 .page__footer {
   background-color: #fafafa;
   border-top: 1px solid #ebebeb;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: $font-sans;
   font-size: 0.8em;
   color: #888;
 }
 
 .page__footer-follow .social-icons .svg-inline--fa {
   color: #aaa;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $accent;
+  }
 }

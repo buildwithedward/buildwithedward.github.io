@@ -7,18 +7,36 @@ classes: wide
 <div class="homepage">
 
   <div class="homepage-intro">
-    <p>Hi, I'm <strong>Edward Praveen</strong> — a Senior ML Engineer and AI Architect focused on building production-grade AI systems.</p>
-    <p>I write about LLMs, RAG pipelines, multi-agent systems, MLOps, and scalable infrastructure on AWS. This blog documents my 180-day hands-on journey through Deep Learning and LLM Systems — one day at a time.</p>
+    <div class="intro-header">
+      <img class="intro-avatar" src="/assets/img/edward.png" alt="Edward Praveen">
+      <div>
+        <p>Hi, I'm <strong class="intro-name">Edward Praveen</strong> - a Senior ML Engineer and AI Architect focused on
+          building production-grade AI systems.</p>
+        <p>I write about LLMs, RAG pipelines, multi-agent systems, MLOps, and scalable AWS infrastructure - with
+          hands-on tutorials, real-world architecture patterns, and design decisions from production systems.</p>
+      </div>
+    </div>
   </div>
 
   <p class="homepage-section-title">Latest Writing</p>
   <ul class="post-list">
-    {% for post in site.posts limit:20 %}
+    {% for post in site.posts limit:10 %}
+    {% unless post.categories contains 'archive' %}
     <li>
-      <span class="post-list__date">{{ post.date | date: "%Y %b" }}</span>
-      <a class="post-list__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-list__date">{{ post.date | date: "%b %Y" }}</span>
+      <span class="post-list__body">
+        <a class="post-list__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% for cat in post.categories %}
+        {% if cat != 'archive' %}
+        <span class="post-list__tag">{{ cat | replace: '-', ' ' }}</span>
+        {% endif %}
+        {% endfor %}
+      </span>
     </li>
+    {% endunless %}
     {% endfor %}
   </ul>
+
+  <a class="see-all-link" href="/categories/">All posts &rarr;</a>
 
 </div>

@@ -2,14 +2,14 @@
 layout: single
 title: "About Me"
 permalink: /about/
-author_profile: false
+author_profile: true
 ---
 
-Hello! I’m Edward Praveen.
+Hello! I'm Edward Praveen.
 
 ## About Me
 
-I’m a Senior Machine Learning Engineer and AI Architect focused on building production-grade AI systems that solve real-world problems.
+I'm a Senior Machine Learning Engineer and AI Architect focused on building production-grade AI systems that solve real-world problems.
 
 My work centers around designing and deploying scalable machine learning and LLM-based applications, with a strong emphasis on reliability, performance, and practical usability in enterprise environments.
 
@@ -32,20 +32,9 @@ I work extensively with modern cloud-native and AI tooling, including:
 - Python-based backend systems and API design  
 - Observability, monitoring, and performance optimization  
 
-## Continuous Learning
-
-I strongly believe in continuous learning and regularly invest time in deepening my understanding of both fundamentals and advanced topics.
-
-Currently, I am:
-- Following hands-on tutorials and building systems to reinforce concepts  
-- Reading books on deep learning, system design, and AI engineering  
-- Revisiting core machine learning and deep learning fundamentals to strengthen my foundation  
-
-This ongoing learning process helps me stay updated and apply better engineering practices in real-world systems.
-
 ## What I Focus On
 
-I’m particularly interested in bridging the gap between AI experimentation and production systems - ensuring models are not just accurate, but also scalable, secure, and maintainable.
+I'm particularly interested in bridging the gap between AI experimentation and production systems - ensuring models are not just accurate, but also scalable, secure, and maintainable.
 
 My work often involves:
 
@@ -55,12 +44,13 @@ My work often involves:
 
 ## About This Blog
 
-This blog is a collection of hands-on learnings, tutorials, architecture patterns, and practical insights from building AI systems.
+This blog is a collection of hands-on tutorials, architecture deep-dives, and production engineering insights - published weekly.
 
-I’ll be sharing:
-- Learnings from tutorials and hands-on implementations  
-- Key insights from books and research  
-- Revisited fundamentals explained with practical context  
-- Real-world system design decisions and trade-offs  
+You'll find:
 
-If you're interested in applied AI, LLM systems, or modern ML engineering, you’ll find practical and actionable content here.
+- **End-to-end tutorials** covering AI/ML engineering, cloud infrastructure, and DevOps  
+- **Architecture patterns** from real client engagements, explained with synthetic data and working code  
+- **System design decisions** - the trade-offs considered, the options rejected, and why  
+- **Production lessons** from deploying LLM systems at scale on AWS  
+
+If you're building AI systems, designing cloud infrastructure, or navigating the gap between ML research and production engineering - this is for you.

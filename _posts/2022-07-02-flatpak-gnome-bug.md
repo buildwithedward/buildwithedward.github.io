@@ -5,6 +5,7 @@ excerpt: "Install cross-distro apps in any Linux Distro"
 header:
   teaser: /assets/img/flatpak.jpg
 tags: [ubuntu]
+categories: [archive]
 ---
 
 ## Installation

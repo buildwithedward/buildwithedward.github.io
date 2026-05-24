@@ -5,6 +5,7 @@ excerpt: "Data Engineering Series - 1"
 header:
   teaser: /assets/img/awslogo.jpg
 tags: [dataengg]
+categories: [archive]
 ---
 
 

@@ -3,7 +3,7 @@ layout: single
 title: "Day 1 of 180 - Dev Environment Setup + Git & GitHub"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
-tags: [deep-learning, llm, systems-design]
+tags: [python, git, github, dev-environment, setup, ml-engineering]
 header:
   teaser: /assets/img/bgimage.png
 ---

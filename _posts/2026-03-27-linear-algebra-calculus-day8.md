@@ -3,7 +3,7 @@ layout: single
 title: "Day 8 of 180 - Linear Algebra & Calculus"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
-tags: [deep-learning, llm, systems-design]
+tags: [linear-algebra, calculus, mathematics, ml-math, deep-learning, neural-networks]
 header:
   teaser: /assets/img/bgimage.png
 ---

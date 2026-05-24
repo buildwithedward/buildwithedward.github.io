@@ -3,7 +3,7 @@ layout: single
 title: "Day 2 of 180 - Linux Terminal + Google Colab & Kaggle Setup"
 excerpt: "Part of my 180-day AI Engineering journey - explained for beginners"
 categories: [dl-llm-systems]
-tags: [deep-learning, llm, systems-design]
+tags: [linux, terminal, google-colab, kaggle, jupyter, gpu, ml-setup]
 header:
   teaser: /assets/img/bgimage.png
 ---

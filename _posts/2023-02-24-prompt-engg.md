@@ -4,7 +4,7 @@ title: "Prompt Engineering - Intro"
 excerpt: "Make AI to dance to your tune!"
 header:
   teaser: /assets/img/prompts.jpg
-tags: [llms]
+tags: [prompt-engineering, llms, generative-ai, chatgpt, ai-basics]
 ---
 
 Have you ever heard about prompt engineering recently?

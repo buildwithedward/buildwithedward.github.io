@@ -5,6 +5,7 @@ excerpt: "Terminal for those who love UI"
 header:
   teaser: /assets/img/hyper.png
 tags: [ubuntu]
+categories: [archive]
 ---
 
 {: .notice--info}

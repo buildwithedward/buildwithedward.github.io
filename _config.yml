@@ -1,7 +1,7 @@
 title: "Build With Edward"
 subtitle: "AI, ML, and Scalable System Design in Production"
 name: "Edward"
-description: "180-day hands-on journey through Deep Learning and LLM Systems"
+description: "Weekly tutorials on AI/ML engineering, infrastructure, and DevOps - with real architecture patterns and code."
 url: "https://edwardpraveen.com"
 baseurl: ""
 
@@ -9,16 +9,38 @@ theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 minimal_mistakes_skin: "air"
 
+search: true
+
+og_image: "/assets/img/edward.jpg"
+
+twitter:
+  username: "buildwithedward"
+
 # Author
 author:
-  name: "Edward"
-  avatar: "/assets/img/edward.jpg"
-  bio: "AI/ML Architect specializing in AWS & LLM Systems"
+  name: "Edward Praveen"
+  avatar: "/assets/img/edward.png"
+  bio: "Senior ML Engineer & AI Architect. Building production-grade LLM systems on AWS."
   location: "India"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/buildwithedward"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/edwardpraveen"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/buildwithedward"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/edwardpraveen"
+    - label: "RSS"
+      icon: "fas fa-fw fa-rss-square"
+      url: "/feed.xml"
 
 # Reading Files
 encoding: "utf-8"
