@@ -129,9 +129,9 @@ body {
 /* ── Homepage ────────────────────────────────────────────────── */
 
 .homepage {
-  max-width: 680px;
-  margin: 2.5rem auto;
-  padding: 0 1rem;
+  max-width: 640px;
+  margin: 2rem 0;
+  padding: 0;
 }
 
 .homepage-intro {
@@ -156,27 +156,6 @@ body {
       text-decoration-color: $accent;
     }
   }
-}
-
-.intro-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  margin-bottom: 0;
-
-  p {
-    margin-top: 0;
-  }
-}
-
-.intro-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid #ebebeb;
-  margin-top: 0.15rem;
 }
 
 .intro-name {
@@ -280,6 +259,69 @@ body {
     text-decoration-color: $accent;
     text-underline-offset: 3px;
   }
+}
+
+/* ── Archive / Category / Tag pages ─────────────────────────── */
+
+/* taxonomy index (the count grid at the top of /categories/ and /tags/) */
+.taxonomy__index {
+  font-family: $font-sans;
+
+  a {
+    font-family: $font-sans;
+    color: #222;
+    font-weight: 500;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .taxonomy__count {
+    color: #aaa;
+  }
+}
+
+/* category/tag section heading (e.g. "dl-llm-systems") */
+.archive__subtitle {
+  font-family: $font-sans;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  border-bottom: 2px solid $accent;
+}
+
+/* post title links in archive lists */
+.archive__item-title {
+  font-family: $font-sans;
+  font-size: 1.1em;
+  font-weight: 600;
+
+  a {
+    color: #111;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+/* excerpt text in archive lists */
+.archive__item-excerpt {
+  font-family: $font-sans;
+  font-size: 0.875em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* date / read-time meta in archive lists */
+.page__meta {
+  font-family: $font-sans;
+  font-size: 0.78em;
+  color: #aaa;
 }
 
 /* ── Figcaption (theme default is Georgia) ───────────────────── */

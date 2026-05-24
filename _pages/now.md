@@ -12,18 +12,20 @@ classes: wide
 
 - Production RAG pipeline with hybrid search on AWS (OpenSearch + Bedrock)
 - Multi-agent orchestration system using LangGraph for a client RFP
-- Weekly tutorials covering AI/ML engineering, DevOps, and cloud infrastructure
+- Evaluating inference optimization strategies (quantization, speculative decoding)
+- Weekly tutorials covering ML/DL, Generative AI, MLOps, and Cloud Computing
 
 ## Currently Reading
 
-- *Deep Learning* - Goodfellow, Bengio, Courville
-- *Designing ML Systems* - Chip Huyen
+- *Machine Learning System Design Interview* - Alex Xu
+- *Hands-on Large Language Models* - Jay Alammar
 
 ## Currently Working On (Day Job)
 
-- Multi-agent orchestration with LangGraph
-- MLOps tooling: experiment tracking, model registry, deployment automation
-- Evaluating inference optimization strategies (quantization, speculative decoding)
+- Understanding client requirements and translating them into technical scopes
+- Creating RFPs with architecture recommendations and effort estimates
+- Building minimal MVPs with production-grade code for client evaluations
+- MLOps tooling: experiment tracking, model registry, and deployment automation
 
 ---
 
