@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Deploying 5 Microservices to AWS ECS - A Complete Hands-On Journey from GitHub to Production"
-date: 2026-05-24
+date: 2026-05-28
 categories: [devops, infrastructure]
 tags: [devops, aws, aws-ecs, ecs-fargate, microservices, codepipeline, codebuild, ecr, docker, fastapi, alb, networking]
 excerpt: "A complete, hands-on walkthrough of deploying five FastAPI microservices and a React frontend to AWS ECS Fargate using CodeBuild and CodePipeline, with path-based ALB routing, real issue resolutions, and networking troubleshooting."
