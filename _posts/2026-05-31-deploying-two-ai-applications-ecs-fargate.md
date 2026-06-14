@@ -5,6 +5,8 @@ date: 2026-05-31
 categories: [devops, infrastructure]
 tags: [devops, aws, aws-ecs, ecs-fargate, bedrock, docker, fastapi, nextjs, flask, secrets-manager, alb, networking]
 excerpt: "A detailed, hands-on walkthrough of deploying two LLM-powered applications (EvalAgent Studio and AI Test Driven) on AWS ECS Fargate, detailing architectural adaptations, network setup, and real-world infrastructure resolutions."
+header:
+  teaser: /assets/img/banner-ai-fargate.png
 ---
 
 ## Introduction

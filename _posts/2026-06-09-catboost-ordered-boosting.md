@@ -5,6 +5,8 @@ date: 2026-06-09
 categories: [machine-learning]
 tags: [catboost, gradient-boosting, categorical-features, ordered-boosting, target-encoding, clinical-ml]
 excerpt: "The standard way to encode categorical features (target encoding) secretly leaks information from the labels into the training data. CatBoost fixes this with ordered boosting. Here's what that means and why it matters for clinical datasets with ICD codes and drug names."
+header:
+  teaser: /assets/img/banner-catboost.png
 ---
 
 ## Introduction

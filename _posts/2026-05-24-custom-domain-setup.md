@@ -5,6 +5,8 @@ date: 2026-05-24
 categories: [devops, infrastructure]
 tags: [devops, github-pages, dns, namecheap, aws, blogging, infrastructure]
 excerpt: "A step-by-step account of moving my technical blog off a github.io subdomain, the architecture decisions I weighed, and exactly what I clicked (and skipped) along the way."
+header:
+  teaser: /assets/img/banner-custom-domain.png
 ---
 
 I've been meaning to do this for a long time. My blog has been sitting at `buildwithedward.github.io` for years - functional, free, and completely forgettable as a URL. If I'm going to write seriously about production AI systems and infra, the least I can do is own my own domain.

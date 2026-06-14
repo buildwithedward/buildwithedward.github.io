@@ -5,6 +5,8 @@ date: 2026-06-13
 categories: [machine-learning]
 tags: [synthetic-data, ctgan, tvae, sdv, privacy, healthcare-ml, data-generation, clinical-ml]
 excerpt: "When you can't share real patient data for model development, synthetic data is the answer - if it's done right. This post covers CTGAN, TVAE, and how to evaluate whether your synthetic data actually preserves the statistical patterns that matter."
+header:
+  teaser: /assets/img/banner-synthetic-data.png
 ---
 
 ## Introduction

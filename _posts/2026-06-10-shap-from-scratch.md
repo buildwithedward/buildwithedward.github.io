@@ -5,6 +5,8 @@ date: 2026-06-10
 categories: [machine-learning]
 tags: [shap, explainability, feature-importance, xgboost, clinical-ml, waterfall, beeswarm]
 excerpt: "feature_importances_ tells you which features the model used most globally. SHAP tells you why the model made a specific prediction for a specific patient. Here's the difference and how to use both."
+header:
+  teaser: /assets/img/banner-shap.png
 ---
 
 ## Introduction

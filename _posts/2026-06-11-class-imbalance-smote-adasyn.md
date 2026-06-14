@@ -5,6 +5,8 @@ date: 2026-06-11
 categories: [machine-learning]
 tags: [class-imbalance, smote, adasyn, borderline-smote, cost-sensitive, imbalanced-learn, clinical-ml]
 excerpt: "A model that predicts 'no readmission' for every patient can claim 88% accuracy. Here's how SMOTE, ADASYN, BorderlineSMOTE, and cost-sensitive learning actually fix the problem - and which metric to watch instead of accuracy."
+header:
+  teaser: /assets/img/banner-class-imbalance.png
 ---
 
 ## Introduction

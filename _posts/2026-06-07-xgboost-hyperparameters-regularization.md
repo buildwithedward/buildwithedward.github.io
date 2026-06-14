@@ -5,6 +5,8 @@ date: 2026-06-07
 categories: [machine-learning]
 tags: [xgboost, hyperparameters, regularization, early-stopping, subsample, clinical-ml]
 excerpt: "n_estimators, max_depth, subsample, lambda, gamma - not as a grid to search, but as levers with specific, observable effects. Run each experiment and watch the model behave differently."
+header:
+  teaser: /assets/img/banner-xgboost.png
 ---
 
 ## Introduction

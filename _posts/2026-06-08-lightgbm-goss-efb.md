@@ -5,6 +5,8 @@ date: 2026-06-08
 categories: [machine-learning]
 tags: [lightgbm, gradient-boosting, goss, efb, leaf-wise, clinical-ml, python]
 excerpt: "LightGBM trains 10–20x faster than XGBoost on large datasets. This post explains the three algorithmic tricks behind that speed - GOSS, EFB, and leaf-wise growth - with experiments to make each one observable."
+header:
+  teaser: /assets/img/banner-lightgbm.png
 ---
 
 ## Introduction

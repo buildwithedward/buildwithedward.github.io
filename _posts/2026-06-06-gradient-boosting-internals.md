@@ -5,6 +5,8 @@ date: 2026-06-06
 categories: [machine-learning]
 tags: [xgboost, gradient-boosting, gbdt, shap, python, clinical-ml, explainability]
 excerpt: "Most people use XGBoost without understanding what it's actually computing. This post walks through the internals - pseudo-residuals, learning rate, regularization, and SHAP - with simple analogies and code you can run yourself."
+header:
+  teaser: /assets/img/banner-gradient-boosting.png
 ---
 
 ## Introduction

@@ -5,6 +5,8 @@ date: 2026-05-28
 categories: [devops, infrastructure]
 tags: [devops, aws, aws-ecs, ecs-fargate, microservices, codepipeline, codebuild, ecr, docker, fastapi, alb, networking]
 excerpt: "A complete, hands-on walkthrough of deploying five FastAPI microservices and a React frontend to AWS ECS Fargate using CodeBuild and CodePipeline, with path-based ALB routing, real issue resolutions, and networking troubleshooting."
+header:
+  teaser: /assets/img/banner-aws-ecs.png
 ---
 
 > This blog documents a real, end-to-end AWS deployment I did hands-on through the AWS Console - no Terraform, no CDK. 5 independent Python/FastAPI backend services, 1 shared React frontend, full CI/CD from GitHub through CodeBuild and CodePipeline, all running on ECS Fargate. I hit 7 real issues along the way and documented every single one.

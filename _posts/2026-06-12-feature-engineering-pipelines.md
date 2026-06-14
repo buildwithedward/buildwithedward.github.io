@@ -5,6 +5,8 @@ date: 2026-06-12
 categories: [machine-learning]
 tags: [sklearn, pipeline, column-transformer, feature-engineering, custom-transformer, clinical-ml]
 excerpt: "Scaling your test data with statistics from test data is a bug. So is fitting your imputer on training + test combined. sklearn Pipelines prevent both - here's how to build one that handles mixed clinical data types cleanly."
+header:
+  teaser: /assets/img/banner-feature-pipeline.png
 ---
 
 ## Introduction
