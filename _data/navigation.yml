@@ -1,8 +1,6 @@
 main:
   - title: "Home"
     url: /
-  - title: "Learning Track"
-    url: /categories/dl-llm-systems/
   - title: "Tags"
     url: /tags/
   - title: "Now"
