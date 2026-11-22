@@ -2,7 +2,9 @@
 layout: single
 title: "Forward Deployed Engineering 101: Selling Outcomes, Not Software"
 date: 2026-11-22
-categories: [watched-and-learned]
+categories: [today-i-learned]
+redirect_from:
+  - /watched-and-learned/forward-deployed-engineering-101/
 tags: [forward-deployed-engineering, fde, go-to-market, palantir, platform-engineering, ai-engineer, youtube]
 excerpt: "Why Palantir sends engineers to sit with customers, the one situation where that model actually makes sense, and why agentic AI might put a lot more of us in that situation. Notes from Kevin Bai's talk at AI Engineer."
 header:

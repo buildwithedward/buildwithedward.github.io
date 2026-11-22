@@ -2,7 +2,9 @@
 layout: single
 title: "The Self-Improving Software Factory: Treating Coding Agents as Infrastructure"
 date: 2026-11-22
-categories: [watched-and-learned]
+categories: [today-i-learned]
+redirect_from:
+  - /watched-and-learned/self-improving-software-factory/
 tags: [coding-agents, agentic-development, software-factory, llm-as-judge, evals, platform-engineering, ai-engineer, youtube]
 excerpt: "Most teams use coding agents interactively on laptops. Zach Lloyd (Warp) argues the next step is a cloud software factory - defined in code, measured on your own data, and improved by agents themselves. Here's what that means and how the pieces fit."
 header:
