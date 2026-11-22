@@ -25,8 +25,6 @@ This talk gives a clear answer: stop thinking of coding agents as a personal too
 
 {% include video id="nKjPBAw_N_0" provider="youtube" %}
 
-*This post covers the main talk only (up to ~17:59); the audience Q&A is not included. The middle of the talk is a demo of Warp's own product (Warp Factories) - I've focused on the general concepts, which Zach says should apply however you build your factory.*
-
 ---
 
 ## Key Takeaways

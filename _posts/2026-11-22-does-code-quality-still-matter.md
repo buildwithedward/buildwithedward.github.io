@@ -23,8 +23,6 @@ This talk is the best answer I've seen. Instead of "yes" or "no", it gives a fra
 
 {% include video id="bU5gDVyu_28" provider="youtube" %}
 
-*This talk has no audience Q&A, so the post covers the whole thing.*
-
 ---
 
 ## Key Takeaways

@@ -25,8 +25,6 @@ This talk is a short, sharp explanation of exactly that. It walks through where 
 
 {% include video id="KwhgfwOSToQ" provider="youtube" %}
 
-*This post covers the main talk only (up to ~12:57); the audience Q&A is not included.*
-
 ---
 
 ## Key Takeaways
