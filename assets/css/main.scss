@@ -214,7 +214,7 @@ body {
   flex-wrap: wrap;
 }
 
-.post-list__link {
+.post-list .post-list__link {  /* beats .page__content a, which adds an underline */
   font-family: $font-sans;
   font-size: 0.97em;
   color: #222;
