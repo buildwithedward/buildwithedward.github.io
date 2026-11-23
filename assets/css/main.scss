@@ -348,3 +348,234 @@ figcaption {
     color: $accent;
   }
 }
+
+/* ── Theme toggle button ─────────────────────────────────────── */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: 0 0 0 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    color: $accent;
+    background: rgba($accent, 0.08);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+  }
+}
+
+.theme-toggle .theme-toggle__icon--light { display: none !important; }
+
+/* ── Dark mode (opt-in via the toggle; light is the default) ─── */
+
+$dark-bg: #121417;
+$dark-surface: #1b1e23;
+$dark-border: #2c3037;
+$dark-text: #dcdfe4;
+$dark-heading: #f3f4f6;
+$dark-muted: #9aa1ab;
+$dark-accent: #60a5fa;
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  background-color: $dark-bg;
+
+  body {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+
+  /* toggle shows the sun in dark mode */
+  .theme-toggle { color: $dark-muted; }
+  .theme-toggle:hover { color: $dark-accent; background: rgba($dark-accent, 0.12); }
+  .theme-toggle .theme-toggle__icon--dark { display: none !important; }
+  .theme-toggle .theme-toggle__icon--light { display: inline-block !important; }
+
+  /* masthead & navigation */
+  .masthead {
+    background-color: $dark-bg;
+    border-bottom-color: $dark-border;
+  }
+  .site-title { color: $dark-heading !important; }
+  .site-subtitle { color: $dark-muted; }
+  .greedy-nav {
+    background: transparent;
+    a { color: $dark-muted; }
+    a:hover { color: $dark-accent; }
+    .visible-links a:before { background: $dark-accent; }
+  }
+  .search__toggle { color: $dark-muted; }
+  .navicon,
+  .navicon:before,
+  .navicon:after { background: $dark-text; }
+  .greedy-nav .hidden-links {
+    background: $dark-surface;
+    border-color: $dark-border;
+    &:before { border-color: $dark-border transparent; }
+    &:after { border-color: $dark-surface transparent; }
+    a { color: $dark-text; }
+    a:hover { background: $dark-bg; color: $dark-accent; }
+    li { border-bottom-color: $dark-border; }
+  }
+
+  /* search overlay */
+  .search-content {
+    background-color: $dark-bg;
+    .search-input { color: $dark-text; background: transparent; }
+    .archive__item-title a { color: $dark-heading; }
+  }
+
+  /* post & page content */
+  .page__title,
+  .page__title a { color: $dark-heading; }
+  .page__meta,
+  .page__date { color: $dark-muted; }
+
+  .page__content {
+    color: $dark-text;
+
+    h1, h2, h3, h4, h5, h6 { color: $dark-heading; }
+    h2 { border-bottom-color: $dark-border; }
+
+    a {
+      color: $dark-heading;
+      text-decoration-color: #555c66;
+      &:hover { color: $dark-accent; text-decoration-color: $dark-accent; }
+    }
+
+    hr { border-top-color: $dark-border; }
+
+    blockquote {
+      color: $dark-muted;
+      border-left-color: $dark-border;
+    }
+
+    /* inline code (fenced blocks already use the theme's dark palette) */
+    code:not(pre code) {
+      background: $dark-surface;
+      color: #e6c07b;
+    }
+  }
+
+  table { color: $dark-text; }
+  thead {
+    background-color: $dark-surface;
+    border-bottom-color: $dark-border;
+  }
+  td { border-bottom-color: $dark-border; }
+
+  /* notice boxes (Key Takeaways etc.) */
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--success,
+  .notice--warning,
+  .notice--danger {
+    background-color: $dark-surface !important;
+    color: $dark-text;
+    border-left: 3px solid $dark-accent;
+    box-shadow: none;
+    a { color: $dark-heading; }
+  }
+
+  /* table of contents */
+  .toc {
+    background: $dark-surface;
+    border-color: $dark-border;
+    color: $dark-text;
+    a { color: $dark-text; }
+    a:hover { color: $dark-accent; }
+  }
+  .toc__menu a { border-bottom-color: $dark-border; }
+
+  /* tags/categories, pagination, related posts */
+  .page__taxonomy-item,
+  .page__taxonomy .page__taxonomy-item {
+    color: $dark-muted;
+    border-color: $dark-border;
+    &:hover { color: $dark-accent; border-color: $dark-accent; }
+  }
+  .page__related {
+    border-top-color: $dark-border;
+  }
+  .page__related-title { color: $dark-muted; }
+  .pagination--pager,
+  .pagination a {
+    color: $dark-text;
+    background-color: $dark-surface;
+    border-color: $dark-border;
+    &:hover { color: $dark-accent; }
+  }
+  .pagination--pager.disabled { color: #555c66; }
+
+  /* sidebar / author profile */
+  .author__name,
+  .author__bio,
+  .author__urls a,
+  .author__urls-wrapper button { color: $dark-text; }
+  .author__urls {
+    background: transparent;
+    border-color: $dark-border;
+  }
+  .author__urls .svg-inline--fa:not(.fa-linkedin):not(.fa-linkedin-in),
+  .author__urls i:not(.fa-linkedin) { color: $dark-muted; }
+
+  /* homepage */
+  .homepage-intro {
+    color: $dark-text;
+    strong { color: $dark-heading; }
+    a { color: $dark-text; text-decoration-color: #555c66; }
+  }
+  .intro-name { color: $dark-accent !important; }
+  .homepage-section-title { color: $dark-muted; border-bottom-color: $dark-accent; }
+  .post-list li { border-bottom-color: $dark-border; }
+  .post-list__date { color: #6b727c; }
+  .post-list__link {
+    color: $dark-text;
+    &:hover { color: $dark-accent; }
+  }
+  .post-list__tag {
+    color: $dark-accent;
+    background: rgba($dark-accent, 0.1);
+    border-color: rgba($dark-accent, 0.25);
+  }
+  .see-all-link { color: $dark-accent; }
+
+  /* archive / category / tag pages */
+  .taxonomy__index a { color: $dark-text; }
+  .taxonomy__index a:hover { color: $dark-accent; }
+  .taxonomy__count { color: #6b727c; }
+  .archive__subtitle { color: $dark-muted; border-bottom-color: $dark-accent; }
+  .archive__item-title a { color: $dark-heading; }
+  .archive__item-title a:hover { color: $dark-accent; }
+  .archive__item-excerpt { color: $dark-muted; }
+  .archive__item-teaser { opacity: 0.9; }
+
+  figcaption { color: $dark-muted; }
+
+  /* footer */
+  .page__footer {
+    background-color: $dark-surface;
+    border-top-color: $dark-border;
+    color: $dark-muted !important;
+    a { color: $dark-text; }
+  }
+  .page__footer-follow .social-icons .svg-inline--fa { color: $dark-muted; }
+
+  /* soften images a little on dark backgrounds */
+  .page__post-image img { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important; }
+}

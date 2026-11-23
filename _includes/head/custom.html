@@ -1,3 +1,31 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Theme: light by default; dark only when the reader picks it. Runs before paint to avoid a flash. -->
+<script>
+  (function () {
+    var theme = "light";
+    try { if (localStorage.getItem("theme") === "dark") theme = "dark"; } catch (e) {}
+    document.documentElement.setAttribute("data-theme", theme);
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.querySelector(".theme-toggle");
+      if (!btn) return;
+      function sync() {
+        var dark = document.documentElement.getAttribute("data-theme") === "dark";
+        var label = dark ? "Switch to light mode" : "Switch to dark mode";
+        btn.setAttribute("aria-label", label);
+        btn.setAttribute("title", label);
+        btn.setAttribute("aria-pressed", dark ? "true" : "false");
+      }
+      sync();
+      btn.addEventListener("click", function () {
+        var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        sync();
+      });
+    });
+  })();
+</script>
